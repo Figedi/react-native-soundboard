@@ -2,7 +2,10 @@ import RNFS from 'react-native-fs';
 
 export const SOUND = {
   PLAY: 'PLAY',
+  PAUSE: 'PAUSE',
+  RESUME: 'RESUME',
   PLAY_BEGIN: 'PLAY_BEGIN',
+  PLAY_BEGIN_LONG: 'PLAY_BEGIN_LONG',
   PLAY_END: 'PLAY_END',
   PLAY_ERROR: 'PLAY_ERROR',
 }
@@ -67,9 +70,9 @@ export const SOUND_LIBRARY = {
       file: './assets/sounds/animals/woodpecker.mp3',
       uri: `${RNFS.MainBundlePath}/assets/images/animals/woodpecker.jpg`,
     }, {
-      name: 'zebra',
-      file: './assets/sounds/animals/zebra.mp3',
-      uri: `${RNFS.MainBundlePath}/assets/images/animals/zebra.jpg`,
+      name: 'gorilla',
+      file: './assets/sounds/animals/gorilla.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/animals/gorilla.jpg`,
     },
   ],
   kittens: [

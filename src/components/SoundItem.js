@@ -29,7 +29,10 @@ class SoundItem extends Component {
   render() {
     return (
       <View style={styles.itemContainer}>
-        <TouchableOpacity onPress={this.props.onPress}>
+        <TouchableOpacity
+          onLongPress={this.props.onLongPress}
+          onPress={this.props.onPress}
+        >
           <Image
             source={{ uri: this.props.uri }}
             style={styles.image}
@@ -44,7 +47,7 @@ class SoundItem extends Component {
 
 const styles = StyleSheet.create({
   itemContainer: {
-    margin: 10,
+    margin: 5,
     width: 100,
     height: 100,
   },

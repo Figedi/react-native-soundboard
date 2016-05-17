@@ -10,10 +10,10 @@ import * as mapDispatchToProps from '../actions'
 
 class App extends Component {
 
-  renderTabBarItems() {
-    return Object.keys(VIEWS).map((itemKey) => {
+  renderTabBarItems(viewKeys = Object.keys(VIEWS)) {
+    return viewKeys.map((itemKey) => {
       let item = VIEWS[itemKey];
-      const onPress = () => this.props.selectTab(item.name)
+      const onPress = () => this.props.selectTab(item.name);
       return (
         <Icon.TabBarItemIOS
           key={item.name}
@@ -22,11 +22,11 @@ class App extends Component {
           selectedIconName={item.icon}
           title={item.title}
           onPress={onPress}
-        >
+          >
           <SoundView sounds={SOUNDS[itemKey]}/>
         </Icon.TabBarItemIOS>
       );
-    })
+    });
   }
 
 

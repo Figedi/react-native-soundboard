@@ -1,5 +1,7 @@
 import { VIEW, VIEW_LIBRARY } from '../constants';
 
+// todo: pageviews stateindex
+
 const INITIAL_STATE = {
   current: Object.keys(VIEW_LIBRARY)[0],
 };
