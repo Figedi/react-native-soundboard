@@ -1,6 +1,5 @@
 import { VIEW, VIEW_LIBRARY } from '../constants';
 import { cloneDeep } from 'lodash';
-// todo: pageviews stateindex
 
 const INITIAL_STATE = {
   views: Object.keys(VIEW_LIBRARY).reduce((acc, view) => {

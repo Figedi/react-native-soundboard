@@ -21,7 +21,7 @@ class SoundView extends Component {
     setView: PropTypes.func,
     sounds: PropTypes.array.isRequired,
     view: PropTypes.string.isRequired,
-    views: PropTypes.array.isRequired,
+    views: PropTypes.object.isRequired,
   }
 
   @autobind

@@ -17,7 +17,7 @@ function* cancelAll(songs) {
 
 let tasks = [];
 /**
- * todo: multiple songs:
+ * multiple songs:
  * 1. sound spielt gerade und man klickt auf den gleichen -> pause
  * 2. sound spielt gerade und man klickt woanders -> alle anderen cancel + neuen abspielen
  * 3. sound spielt gerade und man klickt *long* woanders -> neuen abspielen zusätzlich
@@ -41,7 +41,6 @@ function* doPlay(name, file) {
 }
 
 function* doPause(name, sound) {
-  //todo: pause action which just pauses + toggle aus playaction rausnehmen
   yield put(actions.pauseSong(name));
   return SoundPlayer.pause(sound);
 }
