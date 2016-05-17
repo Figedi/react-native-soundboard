@@ -3,6 +3,7 @@ import { StyleSheet, View, Dimensions } from 'react-native';
 import { connect } from 'react-redux';
 import Swiper from 'react-native-swiper';
 import { find } from 'lodash';
+import autobind from 'autobind-decorator';
 
 import { eachChunks } from '../common/utils';
 import * as mapDispatchToProps from '../actions'
@@ -17,7 +18,15 @@ class SoundView extends Component {
     beginPlaySong: PropTypes.func,
     current: PropTypes.array,
     playing: PropTypes.bool.isRequired,
+    setView: PropTypes.func,
     sounds: PropTypes.array.isRequired,
+    view: PropTypes.string.isRequired,
+    views: PropTypes.array.isRequired,
+  }
+
+  @autobind
+  _onMomentumScrollEnd(e, state) {
+    this.props.setView(this.props.view, state.index);
   }
 
   renderViewSwiped() {
@@ -27,12 +36,14 @@ class SoundView extends Component {
     eachChunks(SOUND_MAX, sounds, (bunch) => {
       out.push(this.renderView(bunch));
     });
-    //todo: index
-
+    let index = this.props.views[this.props.view].index;
     return (
       <Swiper
+        index={index}
+        loop={false}
         showsButtons
         paginationStyle={styles.pagination}
+        onMomentumScrollEnd={this._onMomentumScrollEnd}
       >
         {out}
       </Swiper>
@@ -103,6 +114,7 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state) {
   return {
+    views: state.view.views,
     ...state.sound,
   }
 }

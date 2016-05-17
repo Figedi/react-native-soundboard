@@ -22,8 +22,11 @@ class App extends Component {
           selectedIconName={item.icon}
           title={item.title}
           onPress={onPress}
-          >
-          <SoundView sounds={SOUNDS[itemKey]}/>
+        >
+          <SoundView
+            view={itemKey}
+            sounds={SOUNDS[itemKey]}
+          />
         </Icon.TabBarItemIOS>
       );
     });

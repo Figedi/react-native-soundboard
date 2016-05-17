@@ -12,6 +12,7 @@ export const SOUND = {
 
 export const VIEW = {
   SELECT: 'SELECT',
+  SET: 'SET',
 }
 
 export const VIEW_LIBRARY = {

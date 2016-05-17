@@ -64,3 +64,11 @@ export function selectTab(name) {
     name,
   }
 }
+
+export function setView(name, index) {
+  return {
+    type: VIEW.SET,
+    name,
+    index,
+  }
+}
