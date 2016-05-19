@@ -138,6 +138,42 @@ export const SOUND_LIBRARY = {
       name: 'kitten5',
       file: './assets/sounds/kittens/kitten5.mp3',
       uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten5.jpg`,
+    }, {
+      name: 'kitten6',
+      file: './assets/sounds/kittens/kitten6.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten6.jpg`,
+    }, {
+      name: 'kitten7',
+      file: './assets/sounds/kittens/kitten7.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten7.jpg`,
+    }, {
+      name: 'kitten8',
+      file: './assets/sounds/kittens/kitten8.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten8.jpg`,
+    }, {
+      name: 'kitten9',
+      file: './assets/sounds/kittens/kitten9.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten9.jpg`,
+    }, {
+      name: 'kitten10',
+      file: './assets/sounds/kittens/kitten10.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten10.jpg`,
+    }, {
+      name: 'kitten11',
+      file: './assets/sounds/kittens/kitten11.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten11.jpg`,
+    }, {
+      name: 'kitten12',
+      file: './assets/sounds/kittens/kitten12.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten12.jpg`,
+    }, {
+      name: 'kitten13',
+      file: './assets/sounds/kittens/kitten13.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten13.jpg`,
+    }, {
+      name: 'kitten14',
+      file: './assets/sounds/kittens/kitten14.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten14.jpg`,
     },
   ],
   misc: [
