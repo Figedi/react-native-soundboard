@@ -11,6 +11,7 @@ const INITIAL_STATE = {
 
 function selectTab(state, name) {
   return {
+    ...state,
     current: name,
   };
 }

@@ -26,6 +26,11 @@ export const VIEW_LIBRARY = {
     title: 'Kittens',
     name: 'kittens',
   },
+  misc: {
+    icon: 'folder',
+    title: 'Misc',
+    name: 'misc',
+  },
 }
 
 export const SOUND_LIBRARY = {
@@ -74,6 +79,38 @@ export const SOUND_LIBRARY = {
       name: 'gorilla',
       file: './assets/sounds/animals/gorilla.mp3',
       uri: `${RNFS.MainBundlePath}/assets/images/animals/gorilla.jpg`,
+    }, {
+      name: 'whale',
+      file: './assets/sounds/animals/whale.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/animals/whale.jpg`,
+    }, {
+      name: 'wolf',
+      file: './assets/sounds/animals/wolf.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/animals/wolf.jpg`,
+    }, {
+      name: 'deer',
+      file: './assets/sounds/animals/deer.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/animals/deer.jpg`,
+    }, {
+      name: 'zebra',
+      file: './assets/sounds/animals/zebra.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/animals/zebra.jpg`,
+    }, {
+      name: 'squirrel',
+      file: './assets/sounds/animals/squirrel.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/animals/squirrel.png`,
+    }, {
+      name: 'panda',
+      file: './assets/sounds/animals/panda.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/animals/panda.jpg`,
+    }, {
+      name: 'dolphin',
+      file: './assets/sounds/animals/dolphin.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/animals/dolphin.jpg`,
+    }, {
+      name: 'fox',
+      file: './assets/sounds/animals/fox.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/animals/fox.jpg`,
     },
   ],
   kittens: [
@@ -101,6 +138,17 @@ export const SOUND_LIBRARY = {
       name: 'kitten5',
       file: './assets/sounds/kittens/kitten5.mp3',
       uri: `${RNFS.MainBundlePath}/assets/images/kittens/kitten5.jpg`,
+    },
+  ],
+  misc: [
+    {
+      name: 'cilantro',
+      file: './assets/sounds/misc/cilantro.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/cilantro.png`,
+    }, {
+      name: 'yodel',
+      file: './assets/sounds/misc/yodel.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/yodel.jpg`,
     },
   ],
 }

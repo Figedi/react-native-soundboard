@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { TabBarIOS } from 'react-native';
 import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -9,6 +9,11 @@ import SoundView from './SoundView';
 import * as mapDispatchToProps from '../actions'
 
 class App extends Component {
+
+  static propTypes = {
+    current: PropTypes.string,
+    selectTab: PropTypes.func,
+  }
 
   renderTabBarItems(viewKeys = Object.keys(VIEWS)) {
     return viewKeys.map((itemKey) => {

@@ -36,7 +36,7 @@ class SoundView extends Component {
     eachChunks(SOUND_MAX, sounds, (bunch) => {
       out.push(this.renderView(bunch));
     });
-    let index = this.props.views[this.props.view].index;
+    let index = this.props.views && this.props.views[this.props.view].index || 0;
     return (
       <Swiper
         index={index}
@@ -72,7 +72,7 @@ class SoundView extends Component {
 
   renderView(sounds = this.props.sounds, i = 0) {
     if (sounds.length > SOUND_MAX) {
-      return this.renderViewSwiped()
+      return this.renderViewSwiped();
     } else {
       const { width, height } = Dimensions.get('window');
       return (
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     padding: 20,
     flexWrap: 'wrap',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'flex-start',
   },
 })

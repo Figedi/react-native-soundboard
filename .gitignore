@@ -40,5 +40,5 @@ android/app/libs
 android/keystores/debug.keystore
 
 # own
-assets/sounds
+assets
 ios/assets
