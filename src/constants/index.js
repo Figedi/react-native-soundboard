@@ -185,6 +185,66 @@ export const SOUND_LIBRARY = {
       name: 'yodel',
       file: './assets/sounds/misc/yodel.mp3',
       uri: `${RNFS.MainBundlePath}/assets/images/misc/yodel.jpg`,
+    }, {
+      name: 'badumm',
+      file: './assets/sounds/misc/badumm.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/badumm.png`,
+    }, {
+      name: 'bike',
+      file: './assets/sounds/misc/bike-bell.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/bike-bell.jpg`,
+    }, {
+      name: 'dillgurke',
+      file: './assets/sounds/misc/dillgurke.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/dillgurke.jpg`,
+    }, {
+      name: 'doorbell',
+      file: './assets/sounds/misc/doorbell.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/doorbell.jpg`,
+    }, {
+      name: 'fart',
+      file: './assets/sounds/misc/fart.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/fart.jpg`,
+    }, {
+      name: 'icq',
+      file: './assets/sounds/misc/icq.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/icq.png`,
+    }, {
+      name: 'messenger',
+      file: './assets/sounds/misc/messenger.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/messenger.png`,
+    }, {
+      name: 'skype',
+      file: './assets/sounds/misc/skype.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/skype.png`,
+    }, {
+      name: 'tea',
+      file: './assets/sounds/misc/tee.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/tea.jpg`,
+    }, {
+      name: 'wert',
+      file: './assets/sounds/misc/wert.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/euro.png`,
+    }, {
+      name: 'wha-wha',
+      file: './assets/sounds/misc/wha-wha.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/wha-wha.jpg`,
+    }, {
+      name: 'whip',
+      file: './assets/sounds/misc/whip.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/whip.jpg`,
+    }, {
+      name: 'wwm_intro',
+      file: './assets/sounds/misc/wwm_intro.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/wwm_intro.jpg`,
+    }, {
+      name: 'wwm_stufe',
+      file: './assets/sounds/misc/wwm_stufe.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/wwm_stufe.jpg`,
+    }, {
+      name: 'zonk',
+      file: './assets/sounds/misc/zonk.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/zonk.jpg`,
     },
   ],
 }

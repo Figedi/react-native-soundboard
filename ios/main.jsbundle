@@ -63850,7 +63850,7 @@ LegacyNavigator:NavigationLegacyNavigator};
 
 module.exports=NavigationExperimental;
 });
-__d(504 /* NavigationAnimatedView */, function(global, require, module, exports) {'use strict';
+__d(504 /* NavigationAnimatedView */, function(global, require, module, exports) {'use strict';var _class,_temp;
 
 
 
@@ -63910,7 +63910,7 @@ toValue:navigationState.index}).
 start();}var 
 
 
-NavigationAnimatedView=function(_React$Component){babelHelpers.inherits(NavigationAnimatedView,_React$Component);
+NavigationAnimatedView=(_temp=_class=function(_React$Component){babelHelpers.inherits(NavigationAnimatedView,_React$Component);
 
 
 
@@ -64078,7 +64078,7 @@ initWidth:width});
 this._layout=layout;
 
 layout.height.setValue(height);
-layout.width.setValue(width);}}]);return NavigationAnimatedView;}(React.Component);NavigationAnimatedView.propTypes={applyAnimation:PropTypes.func,navigationState:NavigationPropTypes.navigationState.isRequired,onNavigate:PropTypes.func.isRequired,renderOverlay:PropTypes.func,renderScene:PropTypes.func.isRequired};NavigationAnimatedView.defaultProps={applyAnimation:applyDefaultAnimation};
+layout.width.setValue(width);}}]);return NavigationAnimatedView;}(React.Component),_class.propTypes={applyAnimation:PropTypes.func,navigationState:NavigationPropTypes.navigationState.isRequired,onNavigate:PropTypes.func.isRequired,renderOverlay:PropTypes.func,renderScene:PropTypes.func.isRequired},_class.defaultProps={applyAnimation:applyDefaultAnimation},_temp);
 
 
 
@@ -64146,7 +64146,7 @@ RootContainer:NavigationRootContainer};
 
 module.exports=NavigationContainer;
 });
-__d(506 /* NavigationRootContainer */, function(global, require, module, exports) {'use strict';
+__d(506 /* NavigationRootContainer */, function(global, require, module, exports) {'use strict';var _class,_temp;
 
 
 
@@ -64221,7 +64221,7 @@ return {type:'BackAction'};}var
 
 PropTypes=React.PropTypes;var 
 
-NavigationRootContainer=function(_React$Component){babelHelpers.inherits(NavigationRootContainer,_React$Component);
+NavigationRootContainer=(_temp=_class=function(_React$Component){babelHelpers.inherits(NavigationRootContainer,_React$Component);
 
 
 
@@ -64327,7 +64327,7 @@ var navigation=this.props.renderNavigation(
 this.state.navState,
 this.handleNavigation);
 
-return navigation;}}]);return NavigationRootContainer;}(React.Component);NavigationRootContainer.propTypes={initialAction:NavigationPropTypes.action.isRequired,linkingActionMap:PropTypes.func,persistenceKey:PropTypes.string,reducer:PropTypes.func.isRequired,renderNavigation:PropTypes.func.isRequired};NavigationRootContainer.defaultProps={initialAction:{type:'RootContainerInitialAction'}};NavigationRootContainer.childContextTypes={onNavigate:PropTypes.func};
+return navigation;}}]);return NavigationRootContainer;}(React.Component),_class.propTypes={initialAction:NavigationPropTypes.action.isRequired,linkingActionMap:PropTypes.func,persistenceKey:PropTypes.string,reducer:PropTypes.func.isRequired,renderNavigation:PropTypes.func.isRequired},_class.defaultProps={initialAction:{type:'RootContainerInitialAction'}},_class.childContextTypes={onNavigate:PropTypes.func},_temp);
 
 
 
@@ -65810,7 +65810,7 @@ return true;}
 
 module.exports=shallowEqual;
 });
-__d(519 /* NavigationCardStack */, function(global, require, module, exports) {'use strict';
+__d(519 /* NavigationCardStack */, function(global, require, module, exports) {'use strict';var _class,_temp;
 
 
 
@@ -65890,7 +65890,7 @@ Directions=NavigationCardStackPanResponder.Directions;var
 
 
 
-NavigationCardStack=function(_React$Component){babelHelpers.inherits(NavigationCardStack,_React$Component);
+NavigationCardStack=(_temp=_class=function(_React$Component){babelHelpers.inherits(NavigationCardStack,_React$Component);
 
 
 
@@ -65949,7 +65949,7 @@ props,{
 key:'card_'+props.scene.key,
 panHandlers:panHandlers,
 renderScene:this.props.renderScene,
-style:style})));}}]);return NavigationCardStack;}(React.Component);NavigationCardStack.propTypes={direction:PropTypes.oneOf([Directions.HORIZONTAL,Directions.VERTICAL]),navigationState:NavigationPropTypes.navigationParentState.isRequired,renderOverlay:PropTypes.func,renderScene:PropTypes.func.isRequired};NavigationCardStack.defaultProps={direction:Directions.HORIZONTAL,renderOverlay:emptyFunction.thatReturnsNull};
+style:style})));}}]);return NavigationCardStack;}(React.Component),_class.propTypes={direction:PropTypes.oneOf([Directions.HORIZONTAL,Directions.VERTICAL]),navigationState:NavigationPropTypes.navigationParentState.isRequired,renderOverlay:PropTypes.func,renderScene:PropTypes.func.isRequired},_class.defaultProps={direction:Directions.HORIZONTAL,renderOverlay:emptyFunction.thatReturnsNull},_temp);
 
 
 
@@ -65963,7 +65963,7 @@ flex:1}});
 
 module.exports=NavigationContainer.create(NavigationCardStack);
 });
-__d(520 /* NavigationHeader */, function(global, require, module, exports) {'use strict';
+__d(520 /* NavigationHeader */, function(global, require, module, exports) {'use strict';var _class,_temp;
 
 
 
@@ -66039,7 +66039,7 @@ var APPBAR_HEIGHT=Platform.OS==='ios'?44:56;
 var STATUSBAR_HEIGHT=Platform.OS==='ios'?20:0;var 
 PropTypes=React.PropTypes;var 
 
-NavigationHeader=function(_React$Component){babelHelpers.inherits(NavigationHeader,_React$Component);function NavigationHeader(){babelHelpers.classCallCheck(this,NavigationHeader);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(NavigationHeader).apply(this,arguments));}babelHelpers.createClass(NavigationHeader,[{key:'shouldComponentUpdate',value:function shouldComponentUpdate(
+NavigationHeader=(_temp=_class=function(_React$Component){babelHelpers.inherits(NavigationHeader,_React$Component);function NavigationHeader(){babelHelpers.classCallCheck(this,NavigationHeader);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(NavigationHeader).apply(this,arguments));}babelHelpers.createClass(NavigationHeader,[{key:'shouldComponentUpdate',value:function shouldComponentUpdate(
 
 
 
@@ -66160,7 +66160,7 @@ style:[
 styles[name],
 styleInterpolator(props)]},
 
-subView));}}]);return NavigationHeader;}(React.Component);NavigationHeader.defaultProps={renderTitleComponent:function renderTitleComponent(props){var navigationState=props.navigationState;var title=String(navigationState.title||'');return React.createElement(NavigationHeaderTitle,null,title);},renderLeftComponent:function renderLeftComponent(props){return props.scene.index>0?React.createElement(NavigationHeaderBackButton,null):null;},renderRightComponent:function renderRightComponent(props){return null;}};NavigationHeader.propTypes=babelHelpers.extends({},NavigationPropTypes.SceneRenderer,{renderLeftComponent:PropTypes.func,renderRightComponent:PropTypes.func,renderTitleComponent:PropTypes.func,style:View.propTypes.style,viewProps:PropTypes.shape(View.propTypes)});
+subView));}}]);return NavigationHeader;}(React.Component),_class.defaultProps={renderTitleComponent:function renderTitleComponent(props){var navigationState=props.navigationState;var title=String(navigationState.title||'');return React.createElement(NavigationHeaderTitle,null,title);},renderLeftComponent:function renderLeftComponent(props){return props.scene.index>0?React.createElement(NavigationHeaderBackButton,null):null;},renderRightComponent:function renderRightComponent(props){return null;}},_class.propTypes=babelHelpers.extends({},NavigationPropTypes.SceneRenderer,{renderLeftComponent:PropTypes.func,renderRightComponent:PropTypes.func,renderTitleComponent:PropTypes.func,style:View.propTypes.style,viewProps:PropTypes.shape(View.propTypes)}),_temp);
 
 
 
@@ -67613,7 +67613,7 @@ NavigationTabsReducer.JumpToAction=NavigationTabsJumpToAction;
 
 module.exports=NavigationTabsReducer;
 });
-__d(531 /* NavigationView */, function(global, require, module, exports) {'use strict';
+__d(531 /* NavigationView */, function(global, require, module, exports) {'use strict';var _class,_temp;
 
 
 
@@ -67661,7 +67661,7 @@ PropTypes=React.PropTypes;var
 
 
 
-NavigationView=function(_React$Component){babelHelpers.inherits(NavigationView,_React$Component);
+NavigationView=(_temp=_class=function(_React$Component){babelHelpers.inherits(NavigationView,_React$Component);
 
 
 
@@ -67772,7 +67772,7 @@ initWidth:width});
 
 this._layout=layout;
 layout.height.setValue(height);
-layout.width.setValue(width);}}]);return NavigationView;}(React.Component);NavigationView.propTypes={navigationState:PropTypes.object.isRequired,onNavigate:PropTypes.func.isRequired,renderScene:PropTypes.func.isRequired};
+layout.width.setValue(width);}}]);return NavigationView;}(React.Component),_class.propTypes={navigationState:PropTypes.object.isRequired,onNavigate:PropTypes.func.isRequired,renderScene:PropTypes.func.isRequired},_temp);
 
 
 
@@ -71345,8 +71345,8 @@ var _reactNative=require(11 /* react-native */);
 var _reactRedux=require(551 /* react-redux */);
 var _FontAwesome=require(578 /* react-native-vector-icons/FontAwesome */);var _FontAwesome2=babelHelpers.interopRequireDefault(_FontAwesome);
 
-var _constants=require(723 /* ../constants */);
-var _SoundView=require(693 /* ./SoundView */);var _SoundView2=babelHelpers.interopRequireDefault(_SoundView);
+var _constants=require(689 /* ../constants */);
+var _SoundView=require(723 /* ./SoundView */);var _SoundView2=babelHelpers.interopRequireDefault(_SoundView);
 
 var _actions=require(698 /* ../actions */);var mapDispatchToProps=babelHelpers.interopRequireWildcard(_actions);var 
 
@@ -72156,7 +72156,7 @@ __d(579 /* react-native-vector-icons/lib/create-icon-set.js */, function(global,
 
 
 
-createIconSet;var _react=require(380 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);var _reactNative=require(580 /* ./react-native */);var _iconButton=require(581 /* ./icon-button */);var _iconButton2=babelHelpers.interopRequireDefault(_iconButton);var _tabBarItemIos=require(687 /* ./tab-bar-item-ios */);var _tabBarItemIos2=babelHelpers.interopRequireDefault(_tabBarItemIos);var _toolbarAndroid=require(688 /* ./toolbar-android */);var _toolbarAndroid2=babelHelpers.interopRequireDefault(_toolbarAndroid);var NativeIconAPI=_reactNative.NativeModules&&(_reactNative.NativeModules.RNVectorIconsManager||_reactNative.NativeModules.RNVectorIconsModule);var DEFAULT_ICON_SIZE=12;var DEFAULT_ICON_COLOR='black';function createIconSet(glyphMap,fontFamily,fontFile){
+createIconSet;var _react=require(380 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);var _reactNative=require(580 /* ./react-native */);var _iconButton=require(581 /* ./icon-button */);var _iconButton2=babelHelpers.interopRequireDefault(_iconButton);var _tabBarItemIos=require(687 /* ./tab-bar-item-ios */);var _tabBarItemIos2=babelHelpers.interopRequireDefault(_tabBarItemIos);var _toolbarAndroid=require(688 /* ./toolbar-android */);var _toolbarAndroid2=babelHelpers.interopRequireDefault(_toolbarAndroid);var NativeIconAPI=_reactNative.NativeModules&&(_reactNative.NativeModules.RNVectorIconsManager||_reactNative.NativeModules.RNVectorIconsModule);var DEFAULT_ICON_SIZE=12;var DEFAULT_ICON_COLOR='black';function createIconSet(glyphMap,fontFamily,fontFile){var _class,_temp;
 var fontReference=fontFamily;
 
 if(_reactNative.Platform.OS==='android'&&fontFile){
@@ -72165,7 +72165,7 @@ fontReference=fontFile.replace(/\.(otf|ttf)$/,'');}
 
 var IconNamePropType=_react.PropTypes.oneOf(Object.keys(glyphMap));var 
 
-Icon=function(_Component){babelHelpers.inherits(Icon,_Component);function Icon(){babelHelpers.classCallCheck(this,Icon);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(Icon).apply(this,arguments));}babelHelpers.createClass(Icon,[{key:'setNativeProps',value:function setNativeProps(
+Icon=(_temp=_class=function(_Component){babelHelpers.inherits(Icon,_Component);function Icon(){babelHelpers.classCallCheck(this,Icon);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(Icon).apply(this,arguments));}babelHelpers.createClass(Icon,[{key:'setNativeProps',value:function setNativeProps(
 
 
 
@@ -72205,7 +72205,7 @@ _this2._root=component;};
 
 styleDefaults.fontFamily=fontReference;
 
-return _react2.default.createElement(_reactNative.Text,props,glyph,this.props.children);}}]);return Icon;}(_react.Component);Icon.propTypes={name:IconNamePropType.isRequired,size:_react.PropTypes.number,color:_react.PropTypes.string};Icon.defaultProps={size:DEFAULT_ICON_SIZE,allowFontScaling:false};
+return _react2.default.createElement(_reactNative.Text,props,glyph,this.props.children);}}]);return Icon;}(_react.Component),_class.propTypes={name:IconNamePropType.isRequired,size:_react.PropTypes.number,color:_react.PropTypes.string},_class.defaultProps={size:DEFAULT_ICON_SIZE,allowFontScaling:false},_temp);
 
 
 
@@ -75510,7 +75510,7 @@ this.updateIconSources(nextProps);}}}},{key:'render',value:function render()
 {
 return _react2.default.createElement(_reactNative.ToolbarAndroid,babelHelpers.extends({},this.props,this.state));}}]);return IconToolbarAndroid;}(_react.Component),_class.propTypes={navIconName:IconNamePropType,overflowIconName:IconNamePropType,actions:_react.PropTypes.arrayOf(_react.PropTypes.shape({title:_react.PropTypes.string.isRequired,iconName:IconNamePropType,iconSize:_react.PropTypes.number,iconColor:_react.PropTypes.string,show:_react.PropTypes.oneOf(['always','ifRoom','never']),showWithText:_react.PropTypes.bool})),iconSize:_react.PropTypes.number,iconColor:_react.PropTypes.string},_class.defaultProps={iconSize:24},_temp;}
 });
-__d(723 /* sounds/src/constants/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.SOUND_LIBRARY=exports.VIEW_LIBRARY=exports.VIEW=exports.SOUND=undefined;var _reactNativeFs=require(689 /* react-native-fs */);var _reactNativeFs2=babelHelpers.interopRequireDefault(_reactNativeFs);
+__d(689 /* sounds/src/constants/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.SOUND_LIBRARY=exports.VIEW_LIBRARY=exports.VIEW=exports.SOUND=undefined;var _reactNativeFs=require(690 /* react-native-fs */);var _reactNativeFs2=babelHelpers.interopRequireDefault(_reactNativeFs);
 
 var SOUND=exports.SOUND={
 PLAY:'PLAY',
@@ -75696,9 +75696,69 @@ uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/cilantro.png'},
 {
 name:'yodel',
 file:'./assets/sounds/misc/yodel.mp3',
-uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/yodel.jpg'}]};
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/yodel.jpg'},
+{
+name:'badumm',
+file:'./assets/sounds/misc/badumm.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/badumm.png'},
+{
+name:'bike',
+file:'./assets/sounds/misc/bike-bell.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/bike-bell.jpg'},
+{
+name:'dillgurke',
+file:'./assets/sounds/misc/dillgurke.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/dillgurke.jpg'},
+{
+name:'doorbell',
+file:'./assets/sounds/misc/doorbell.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/doorbell.jpg'},
+{
+name:'fart',
+file:'./assets/sounds/misc/fart.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/fart.jpg'},
+{
+name:'icq',
+file:'./assets/sounds/misc/icq.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/icq.png'},
+{
+name:'messenger',
+file:'./assets/sounds/misc/messenger.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/messenger.png'},
+{
+name:'skype',
+file:'./assets/sounds/misc/skype.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/skype.png'},
+{
+name:'tea',
+file:'./assets/sounds/misc/tee.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/tea.jpg'},
+{
+name:'wert',
+file:'./assets/sounds/misc/wert.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/euro.png'},
+{
+name:'wha-wha',
+file:'./assets/sounds/misc/wha-wha.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/wha-wha.jpg'},
+{
+name:'whip',
+file:'./assets/sounds/misc/whip.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/whip.jpg'},
+{
+name:'wwm_intro',
+file:'./assets/sounds/misc/wwm_intro.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/wwm_intro.jpg'},
+{
+name:'wwm_stufe',
+file:'./assets/sounds/misc/wwm_stufe.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/wwm_stufe.jpg'},
+{
+name:'zonk',
+file:'./assets/sounds/misc/zonk.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/zonk.jpg'}]};
 });
-__d(689 /* react-native-fs/FS.common.js */, function(global, require, module, exports) {'use strict';
+__d(690 /* react-native-fs/FS.common.js */, function(global, require, module, exports) {'use strict';
 
 
 
@@ -75710,9 +75770,9 @@ global.self=global;}
 var RNFSManager=require(11 /* react-native */).NativeModules.RNFSManager;
 var NativeAppEventEmitter=require(11 /* react-native */).NativeAppEventEmitter;
 var DeviceEventEmitter=require(11 /* react-native */).DeviceEventEmitter;
-var Promise=require(690 /* bluebird */);
-var base64=require(691 /* base-64 */);
-var utf8=require(692 /* utf8 */);
+var Promise=require(691 /* bluebird */);
+var base64=require(692 /* base-64 */);
+var utf8=require(693 /* utf8 */);
 
 var _readDir=Promise.promisify(RNFSManager.readDir);
 var _exists=Promise.promisify(RNFSManager.exists);
@@ -75896,7 +75956,7 @@ PicturesDirectoryPath:RNFSManager.NSPicturesDirectoryPath};
 
 module.exports=RNFS;
 });
-__d(690 /* bluebird/js/browser/bluebird.js */, function(global, require, module, exports) {/* @preserve
+__d(691 /* bluebird/js/browser/bluebird.js */, function(global, require, module, exports) {/* @preserve
  * The MIT License (MIT)
  * 
  * Copyright (c) 2013-2015 Petka Antonov
@@ -80784,7 +80844,7 @@ module.exports=ret;},
 {"./es5.js":14}]},{},[4])(4);});
 ;if(typeof window!=='undefined'&&window!==null){window.P=window.Promise;}else if(typeof self!=='undefined'&&self!==null){self.P=self.Promise;}
 });
-__d(691 /* base-64/base64.js */, function(global, require, module, exports) {;
+__d(692 /* base-64/base64.js */, function(global, require, module, exports) {;
 (function(root){
 
 
@@ -80950,7 +81010,7 @@ root.base64=base64;}})(
 
 this);
 });
-__d(692 /* utf8/utf8.js */, function(global, require, module, exports) {;
+__d(693 /* utf8/utf8.js */, function(global, require, module, exports) {;
 (function(root){
 
 
@@ -81195,7 +81255,7 @@ root.utf8=utf8;}})(
 
 this);
 });
-__d(693 /* sounds/src/containers/SoundView.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _desc,_value,_class,_class2,_temp;var _react=require(380 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
+__d(723 /* sounds/src/containers/SoundView.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _desc,_value,_class,_class2,_temp;var _react=require(380 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
 var _reactNative=require(11 /* react-native */);
 var _reactRedux=require(551 /* react-redux */);
 var _reactNativeSwiper=require(694 /* react-native-swiper */);var _reactNativeSwiper2=babelHelpers.interopRequireDefault(_reactNativeSwiper);
@@ -81233,13 +81293,15 @@ var out=[];
 (0,_utils.eachChunks)(SOUND_MAX,sounds,function(bunch){
 out.push(_this2.renderView(bunch));});
 
-var index=this.props.views&&this.props.views[this.props.view].index||0;
+var index=this.props.views&&this.props.views[this.props.view].index||0;var _Dimensions$get=
+_reactNative.Dimensions.get('window');var height=_Dimensions$get.height;
 return (
 _react2.default.createElement(_reactNativeSwiper2.default,{
 index:index,
 loop:false,
 showsButtons:true,
 paginationStyle:styles.pagination,
+style:[{height:height-50}],
 onMomentumScrollEnd:this._onMomentumScrollEnd},
 
 out));}},{key:'renderSounds',value:function renderSounds(
@@ -81270,8 +81332,8 @@ onLongPress:onLongPress}));});}},{key:'renderView',value:function renderView()
 {var sounds=arguments.length<=0||arguments[0]===undefined?this.props.sounds:arguments[0];var i=arguments.length<=1||arguments[1]===undefined?0:arguments[1];
 if(sounds.length>SOUND_MAX){
 return this.renderViewSwiped();}else 
-{var _Dimensions$get=
-_reactNative.Dimensions.get('window');var width=_Dimensions$get.width;var height=_Dimensions$get.height;
+{var _Dimensions$get2=
+_reactNative.Dimensions.get('window');var width=_Dimensions$get2.width;var height=_Dimensions$get2.height;
 return (
 _react2.default.createElement(_reactNative.View,{
 key:i,
@@ -81330,6 +81392,12 @@ var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++)
 
 
 
+
+
+
+var _react=require(380 /* react */);
+
+var _react2=_interopRequireDefault(_react);
 
 var _reactNative=require(11 /* react-native */);
 
@@ -81423,32 +81491,33 @@ fontFamily:'Arial'}});
 
 
 
-module.exports=_reactNative2.default.createClass({
+module.exports=_react2.default.createClass({
 displayName:'exports',
 
 
 
 
 
+
 propTypes:{
-horizontal:_reactNative2.default.PropTypes.bool,
-children:_reactNative2.default.PropTypes.node.isRequired,
+horizontal:_react2.default.PropTypes.bool,
+children:_react2.default.PropTypes.node.isRequired,
 style:_reactNative.View.propTypes.style,
-pagingEnabled:_reactNative2.default.PropTypes.bool,
-showsHorizontalScrollIndicator:_reactNative2.default.PropTypes.bool,
-showsVerticalScrollIndicator:_reactNative2.default.PropTypes.bool,
-bounces:_reactNative2.default.PropTypes.bool,
-scrollsToTop:_reactNative2.default.PropTypes.bool,
-removeClippedSubviews:_reactNative2.default.PropTypes.bool,
-automaticallyAdjustContentInsets:_reactNative2.default.PropTypes.bool,
-showsPagination:_reactNative2.default.PropTypes.bool,
-showsButtons:_reactNative2.default.PropTypes.bool,
-loop:_reactNative2.default.PropTypes.bool,
-autoplay:_reactNative2.default.PropTypes.bool,
-autoplayTimeout:_reactNative2.default.PropTypes.number,
-autoplayDirection:_reactNative2.default.PropTypes.bool,
-index:_reactNative2.default.PropTypes.number,
-renderPagination:_reactNative2.default.PropTypes.func},
+pagingEnabled:_react2.default.PropTypes.bool,
+showsHorizontalScrollIndicator:_react2.default.PropTypes.bool,
+showsVerticalScrollIndicator:_react2.default.PropTypes.bool,
+bounces:_react2.default.PropTypes.bool,
+scrollsToTop:_react2.default.PropTypes.bool,
+removeClippedSubviews:_react2.default.PropTypes.bool,
+automaticallyAdjustContentInsets:_react2.default.PropTypes.bool,
+showsPagination:_react2.default.PropTypes.bool,
+showsButtons:_react2.default.PropTypes.bool,
+loop:_react2.default.PropTypes.bool,
+autoplay:_react2.default.PropTypes.bool,
+autoplayTimeout:_react2.default.PropTypes.number,
+autoplayDirection:_react2.default.PropTypes.bool,
+index:_react2.default.PropTypes.number,
+renderPagination:_react2.default.PropTypes.func},
 
 
 mixins:[_reactTimerMixin2.default],
@@ -81482,8 +81551,10 @@ index:0};},
 
 
 
+
 getInitialState:function getInitialState(){
 return this.initState(this.props);},
+
 
 
 
@@ -81502,25 +81573,39 @@ componentDidMount:function componentDidMount(){
 this.autoplay();},
 
 initState:function initState(props){
+
+var state=this.state||{};
+
 var initState={
 isScrolling:false,
 autoplayEnd:false};
 
 
 initState.total=props.children?props.children.length||1:0;
-initState.index=initState.total>1?Math.min(props.index,initState.total-1):0;
+
+if(state.total===initState.total){
+
+initState.index=state.index;}else 
+{
+
+initState.index=initState.total>1?Math.min(props.index,initState.total-1):0;}
 
 
-initState.dir=props.horizontal==false?'y':'x';
+
+initState.dir=props.horizontal===false?'y':'x';
 initState.width=props.width||width;
 initState.height=props.height||height;
 initState.offset={};
 
 if(initState.total>1){
-var setup=props.loop?1:initState.index;
-initState.offset[initState.dir]=initState.dir=='y'?initState.height*setup:initState.width*setup;}
+var setup=initState.index;
+if(props.loop){
+setup++;}
+
+initState.offset[initState.dir]=initState.dir==='y'?initState.height*setup:initState.width*setup;}
 
 return initState;},
+
 
 
 
@@ -81529,16 +81614,20 @@ return initState;},
 autoplay:function autoplay(){
 var _this=this;
 
-if(!Array.isArray(this.props.children)||!this.props.autoplay||this.state.isScrolling||this.state.autoplayEnd)return;
+if(!Array.isArray(this.props.children)||!this.props.autoplay||this.state.isScrolling||this.state.autoplayEnd){
+return;}
+
 
 clearTimeout(this.autoplayTimer);
 
 this.autoplayTimer=this.setTimeout(function(){
-if(!_this.props.loop&&(_this.props.autoplayDirection?_this.state.index==_this.state.total-1:_this.state.index==0))return _this.setState({
-autoplayEnd:true});
+if(!_this.props.loop&&(_this.props.autoplayDirection?_this.state.index===_this.state.total-1:_this.state.index===0)){
+return _this.setState({autoplayEnd:true});}
 
-_this.scrollTo(_this.props.autoplayDirection?1:-1);},
+
+_this.scrollBy(_this.props.autoplayDirection?1:-1);},
 this.props.autoplayTimeout*1000);},
+
 
 
 
@@ -81549,12 +81638,11 @@ onScrollBegin:function onScrollBegin(e){
 var _this2=this;
 
 
-this.setState({
-isScrolling:true});
-
+this.setState({isScrolling:true});
 
 this.setTimeout(function(){
 _this2.props.onScrollBeginDrag&&_this2.props.onScrollBeginDrag(e,_this2.state,_this2);});},
+
 
 
 
@@ -81568,6 +81656,15 @@ var _this3=this;
 
 this.setState({
 isScrolling:false});
+
+
+
+if(!e.nativeEvent.contentOffset){
+if(this.state.dir==='x'){
+e.nativeEvent.contentOffset={x:e.nativeEvent.position*this.state.width};}else 
+{
+e.nativeEvent.contentOffset={y:e.nativeEvent.position*this.state.height};}}
+
 
 
 this.updateIndex(e.nativeEvent.contentOffset,this.state.dir);
@@ -81587,19 +81684,21 @@ _this3.props.onMomentumScrollEnd&&_this3.props.onMomentumScrollEnd(e,_this3.stat
 
 
 
+
 updateIndex:function updateIndex(offset,dir){
 
 var state=this.state;
 var index=state.index;
 var diff=offset[dir]-state.offset[dir];
-var step=dir=='x'?state.width:state.height;
+var step=dir==='x'?state.width:state.height;
 
 
 if(!diff)return;
 
 
 
-index=index+diff/step;
+
+index=parseInt(index+diff/step);
 
 if(this.props.loop){
 if(index<=-1){
@@ -81621,20 +81720,43 @@ offset:offset});},
 
 
 
-scrollTo:function scrollTo(index){
+
+scrollBy:function scrollBy(index){
+var _this4=this;
+
 if(this.state.isScrolling||this.state.total<2)return;
 var state=this.state;
 var diff=(this.props.loop?1:0)+index+this.state.index;
 var x=0;
 var y=0;
-if(state.dir=='x')x=diff*state.width;
-if(state.dir=='y')y=diff*state.height;
-this.refs.scrollView&&this.refs.scrollView.scrollTo(y,x);
+if(state.dir==='x')x=diff*state.width;
+if(state.dir==='y')y=diff*state.height;
+
+if(_reactNative.Platform.OS==='android'){
+this.refs.scrollView&&this.refs.scrollView.setPage(diff);}else 
+{
+this.refs.scrollView&&this.refs.scrollView.scrollTo({
+y:y,
+x:x});}
+
+
 
 
 this.setState({
 isScrolling:true,
-autoplayEnd:false});},
+autoplayEnd:false});
+
+
+
+if(_reactNative.Platform.OS==='android'){
+this.setTimeout(function(){
+_this4.onScrollEnd({
+nativeEvent:{
+position:diff}});},
+
+
+50);}},
+
 
 
 
@@ -81648,7 +81770,7 @@ renderPagination:function renderPagination(){
 if(this.state.total<=1)return null;
 
 var dots=[];
-var ActiveDot=this.props.activeDot||_reactNative2.default.createElement(_reactNative.View,{style:{
+var ActiveDot=this.props.activeDot||_react2.default.createElement(_reactNative.View,{style:{
 backgroundColor:'#007aff',
 width:8,
 height:8,
@@ -81658,7 +81780,7 @@ marginRight:3,
 marginTop:3,
 marginBottom:3}});
 
-var Dot=this.props.dot||_reactNative2.default.createElement(_reactNative.View,{style:{
+var Dot=this.props.dot||_react2.default.createElement(_reactNative.View,{style:{
 backgroundColor:'rgba(0,0,0,.2)',
 width:8,
 height:8,
@@ -81669,10 +81791,10 @@ marginTop:3,
 marginBottom:3}});
 
 for(var i=0;i<this.state.total;i++){
-dots.push(i===this.state.index?_reactNative2.default.cloneElement(ActiveDot,{key:i}):_reactNative2.default.cloneElement(Dot,{key:i}));}
+dots.push(i===this.state.index?_react2.default.cloneElement(ActiveDot,{key:i}):_react2.default.cloneElement(Dot,{key:i}));}
 
 
-return _reactNative2.default.createElement(
+return _react2.default.createElement(
 _reactNative.View,
 {pointerEvents:'none',style:[styles['pagination_'+this.state.dir],this.props.paginationStyle]},
 dots);},
@@ -81681,31 +81803,31 @@ dots);},
 renderTitle:function renderTitle(){
 var child=this.props.children[this.state.index];
 var title=child&&child.props.title;
-return title?_reactNative2.default.createElement(
+return title?_react2.default.createElement(
 _reactNative.View,
 {style:styles.title},
 this.props.children[this.state.index].props.title):
 null;},
 
 renderNextButton:function renderNextButton(){
-var _this4=this;
+var _this5=this;
 
-var button=undefined;
+var button=void 0;
 
 if(this.props.loop||this.state.index!=this.state.total-1){
-button=this.props.nextButton||_reactNative2.default.createElement(
+button=this.props.nextButton||_react2.default.createElement(
 _reactNative.Text,
 {style:styles.buttonText},
 '›');}
 
 
 
-return _reactNative2.default.createElement(
+return _react2.default.createElement(
 _reactNative.TouchableOpacity,
 {onPress:function onPress(){
-return button!==null&&_this4.scrollTo.call(_this4,1);}},
+return button!==null&&_this5.scrollBy.call(_this5,1);}},
 
-_reactNative2.default.createElement(
+_react2.default.createElement(
 _reactNative.View,
 null,
 button));},
@@ -81713,24 +81835,24 @@ button));},
 
 
 renderPrevButton:function renderPrevButton(){
-var _this5=this;
+var _this6=this;
 
 var button=null;
 
 if(this.props.loop||this.state.index!=0){
-button=this.props.prevButton||_reactNative2.default.createElement(
+button=this.props.prevButton||_react2.default.createElement(
 _reactNative.Text,
 {style:styles.buttonText},
 '‹');}
 
 
 
-return _reactNative2.default.createElement(
+return _react2.default.createElement(
 _reactNative.TouchableOpacity,
 {onPress:function onPress(){
-return button!==null&&_this5.scrollTo.call(_this5,-1);}},
+return button!==null&&_this6.scrollBy.call(_this6,-1);}},
 
-_reactNative2.default.createElement(
+_react2.default.createElement(
 _reactNative.View,
 null,
 button));},
@@ -81738,7 +81860,7 @@ button));},
 
 
 renderButtons:function renderButtons(){
-return _reactNative2.default.createElement(
+return _react2.default.createElement(
 _reactNative.View,
 {pointerEvents:'box-none',style:[styles.buttonWrapper,{width:this.state.width,height:this.state.height},this.props.buttonWrapperStyle]},
 this.renderPrevButton(),
@@ -81746,20 +81868,28 @@ this.renderNextButton());},
 
 
 renderScrollView:function renderScrollView(pages){
-if(_reactNative.Platform.OS==='ios')return _reactNative2.default.createElement(
+var _this7=this;
+
+if(_reactNative.Platform.OS==='ios')return _react2.default.createElement(
 _reactNative.ScrollView,
 _extends({ref:'scrollView'},
 this.props,{
 contentContainerStyle:[styles.wrapper,this.props.style],
 contentOffset:this.state.offset,
 onScrollBeginDrag:this.onScrollBegin,
+onScrollEndDrag:function onScrollEndDrag(){
+return _this7.setState({isScrolling:false});},
+
 onMomentumScrollEnd:this.onScrollEnd}),
 pages);
 
-return _reactNative2.default.createElement(
+return _react2.default.createElement(
 _reactNative.ViewPagerAndroid,
-{ref:'scrollView',
-style:{flex:1}},
+_extends({ref:'scrollView'},
+this.props,{
+initialPage:this.state.index,
+onPageSelected:this.onScrollEnd,
+style:{flex:1}}),
 pages);},
 
 
@@ -81770,7 +81900,7 @@ pages);},
 
 
 injectState:function injectState(props){
-var _this6=this;
+var _this8=this;
 
 
 
@@ -81786,13 +81916,14 @@ if(typeof props[prop]==='function'&&prop!=='onMomentumScrollEnd'&&prop!=='render
 (function(){
 var originResponder=props[prop];
 props[prop]=function(e){
-return originResponder(e,_this6.state,_this6);};})();}}
+return originResponder(e,_this8.state,_this8);};})();}}
 
 
 
 
 
 return props;},
+
 
 
 
@@ -81823,19 +81954,19 @@ pages.push(0);}
 
 
 pages=pages.map(function(page,i){
-return _reactNative2.default.createElement(
+return _react2.default.createElement(
 _reactNative.View,
 {style:pageStyle,key:i},
 children[page]);});}else 
 
 
-pages=_reactNative2.default.createElement(
+pages=_react2.default.createElement(
 _reactNative.View,
 {style:pageStyle},
 children);
 
 
-return _reactNative2.default.createElement(
+return _react2.default.createElement(
 _reactNative.View,
 {style:[styles.container,{
 width:state.width,
@@ -98298,7 +98429,7 @@ selectTab=selectTab;exports.
 
 
 
-setView=setView;var _constants=require(723 /* ../constants */);function beginPlaySong(name,file){return {type:_constants.SOUND.PLAY_BEGIN,name:name,file:file};}function beginPlayLong(name,file){return {type:_constants.SOUND.PLAY_BEGIN_LONG,name:name,file:file};}function playSong(name,file,sound){return {type:_constants.SOUND.PLAY,name:name,file:file,sound:sound};}function pauseSong(name){return {type:_constants.SOUND.PAUSE,name:name};}function resumeSong(name){return {type:_constants.SOUND.RESUME,name:name};}function playSongEnd(name){return {type:_constants.SOUND.PLAY_END,name:name};}function playError(name,error){return {type:_constants.SOUND.PLAY_ERROR,name:name,error:error};}function selectTab(name){return {type:_constants.VIEW.SELECT,name:name};}function setView(name,index){
+setView=setView;var _constants=require(689 /* ../constants */);function beginPlaySong(name,file){return {type:_constants.SOUND.PLAY_BEGIN,name:name,file:file};}function beginPlayLong(name,file){return {type:_constants.SOUND.PLAY_BEGIN_LONG,name:name,file:file};}function playSong(name,file,sound){return {type:_constants.SOUND.PLAY,name:name,file:file,sound:sound};}function pauseSong(name){return {type:_constants.SOUND.PAUSE,name:name};}function resumeSong(name){return {type:_constants.SOUND.RESUME,name:name};}function playSongEnd(name){return {type:_constants.SOUND.PLAY_END,name:name};}function playError(name,error){return {type:_constants.SOUND.PLAY_ERROR,name:name,error:error};}function selectTab(name){return {type:_constants.VIEW.SELECT,name:name};}function setView(name,index){
 return {
 type:_constants.VIEW.SET,
 name:name,
@@ -98306,12 +98437,12 @@ index:index};}
 });
 __d(699 /* sounds/src/components/index.js */, function(global, require, module, exports) {exports.SoundItem=require(700 /* ./SoundItem */).default;
 });
-__d(700 /* sounds/src/components/SoundItem.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react=require(380 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
+__d(700 /* sounds/src/components/SoundItem.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _class,_temp;var _react=require(380 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
 
 var _reactNative=require(11 /* react-native */);
 var _FontAwesome=require(578 /* react-native-vector-icons/FontAwesome */);var _FontAwesome2=babelHelpers.interopRequireDefault(_FontAwesome);var 
 
-SoundItem=function(_Component){babelHelpers.inherits(SoundItem,_Component);
+SoundItem=(_temp=_class=function(_Component){babelHelpers.inherits(SoundItem,_Component);
 
 
 
@@ -98345,7 +98476,7 @@ _react2.default.createElement(_reactNative.Image,{
 source:{uri:this.props.uri},
 style:styles.image},
 
-this.renderPlayPause()))));}}]);return SoundItem;}(_react.Component);SoundItem.propTypes={file:_react.PropTypes.string.isRequired,uri:_react.PropTypes.string.isRequired};
+this.renderPlayPause()))));}}]);return SoundItem;}(_react.Component),_class.propTypes={file:_react.PropTypes.string.isRequired,uri:_react.PropTypes.string.isRequired},_temp);
 
 
 
@@ -100345,7 +100476,7 @@ __d(715 /* sounds/src/sagas/sound.js */, function(global, require, module, expor
 
 
 
-root;var _effects=require(716 /* redux-saga/effects */);var _lodash=require(695 /* lodash */);var _constants=require(723 /* ../constants */);var _actions=require(698 /* ../actions */);var actions=babelHelpers.interopRequireWildcard(_actions);var _services=require(717 /* ../services */);var _marked=[cancelAll,doPlay,doPause,doResume,onLongPress,onPress,watchTask,watchPress,watchLongPress,root].map(regeneratorRuntime.mark);var currentSounds=function currentSounds(state){return state.sound.current;};function cancelAll(songs){return regeneratorRuntime.wrap(function cancelAll$(_context2){while(1){switch(_context2.prev=_context2.next){case 0:_context2.next=2;return songs.map(regeneratorRuntime.mark(function mapFunc(_ref){var $sound=_ref.$sound;var name=_ref.name;return regeneratorRuntime.wrap(function mapFunc$(_context){while(1){switch(_context.prev=_context.next){case 0:cleanUp(name);_context.next=3;return (0,_effects.put)(actions.playSongEnd(name));case 3:return _context.abrupt('return',_services.SoundPlayer.stop($sound));case 4:case 'end':return _context.stop();}}},mapFunc,this);}));case 2:return _context2.abrupt('return',_context2.sent);case 3:case 'end':return _context2.stop();}}},_marked[0],this);}var tasks=[];function doPlay(name,file){var sound;return regeneratorRuntime.wrap(function doPlay$(_context3){while(1){switch(_context3.prev=_context3.next){case 0:_context3.prev=0;_context3.next=3;return (0,_effects.call)(_services.SoundPlayer.loadSound.bind(_services.SoundPlayer),file);case 3:sound=_context3.sent;_context3.next=6;return (0,_effects.put)(actions.playSong(name,file,sound));case 6:_context3.next=8;return (0,_effects.call)(_services.SoundPlayer.play.bind(_services.SoundPlayer),sound);case 8:_context3.next=10;return (0,_effects.put)(actions.playSongEnd(name));case 10:return _context3.abrupt('return',_context3.sent);case 13:_context3.prev=13;_context3.t0=_context3['catch'](0);_context3.next=17;return (0,_effects.put)(actions.playError(name,_context3.t0));case 17:case 'end':return _context3.stop();}}},_marked[1],this,[[0,13]]);}function doPause(name,sound){return regeneratorRuntime.wrap(function doPause$(_context4){while(1){switch(_context4.prev=_context4.next){case 0:_context4.next=2;return (0,_effects.put)(actions.pauseSong(name));case 2:return _context4.abrupt('return',_services.SoundPlayer.pause(sound));case 3:case 'end':return _context4.stop();}}},_marked[2],this);}function doResume(name,sound){return regeneratorRuntime.wrap(function doResume$(_context5){while(1){switch(_context5.prev=_context5.next){case 0:_context5.next=2;return (0,_effects.put)(actions.resumeSong(name));case 2:_context5.next=4;return (0,_effects.call)(_services.SoundPlayer.play.bind(_services.SoundPlayer),sound);case 4:_context5.next=6;return (0,_effects.put)(actions.playSongEnd(name));case 6:case 'end':return _context5.stop();}}},_marked[3],this);}function onLongPress(action){var name,file,current,currentSong;return regeneratorRuntime.wrap(function onLongPress$(_context6){while(1){switch(_context6.prev=_context6.next){case 0:name=action.name;file=action.file;_context6.next=4;return (0,_effects.select)(currentSounds);case 4:current=_context6.sent;_context6.prev=5;currentSong=(0,_lodash.find)(current,{name:name});if(!currentSong){_context6.next=11;break;}return _context6.delegateYield(doPause(currentSong.name,currentSong.$sound),'t0',9);case 9:_context6.next=12;break;case 11:return _context6.delegateYield(doPlay(name,file),'t1',12);case 12:_context6.next=18;break;case 14:_context6.prev=14;_context6.t2=_context6['catch'](5);_context6.next=18;return (0,_effects.put)(actions.playError(name,_context6.t2));case 18:case 'end':return _context6.stop();}}},_marked[4],this,[[5,14]]);}function onPress(action){var name,file,current,currentPlaying,currentSong,_currentSong;return regeneratorRuntime.wrap(function onPress$(_context7){while(1){switch(_context7.prev=_context7.next){case 0:name=action.name;file=action.file;_context7.next=4;return (0,_effects.select)(currentSounds);case 4:current=_context7.sent;currentPlaying=(0,_lodash.filter)(current,{playing:true});_context7.prev=6;if(!currentPlaying.length){_context7.next=18;break;}currentSong=(0,_lodash.find)(currentPlaying,{name:name});if(!currentSong){_context7.next=13;break;}return _context7.delegateYield(doPause(currentSong.name,currentSong.$sound),'t0',11);case 11:_context7.next=16;break;case 13:_context7.next=15;return cancelAll(currentPlaying);case 15:return _context7.delegateYield(doPlay(name,file),'t1',16);case 16:_context7.next=24;break;case 18:_currentSong=(0,_lodash.find)(current,{name:name});if(!_currentSong){_context7.next=23;break;}return _context7.delegateYield(doResume(_currentSong.name,_currentSong.$sound),'t2',21);case 21:_context7.next=24;break;case 23:return _context7.delegateYield(doPlay(name,file),'t3',24);case 24:_context7.next=30;break;case 26:_context7.prev=26;_context7.t4=_context7['catch'](6);_context7.next=30;return (0,_effects.put)(actions.playError(name,_context7.t4));case 30:case 'end':return _context7.stop();}}},_marked[5],this,[[6,26]]);}function cleanUp(name){var newTasks=tasks.slice();(0,_lodash.remove)(newTasks,{name:name});tasks=newTasks;}function watchTask(event,saga){var _this=this;var _loop;return regeneratorRuntime.wrap(function watchTask$(_context9){while(1){switch(_context9.prev=_context9.next){case 0:_loop=regeneratorRuntime.mark(function _loop(){var action,task;return regeneratorRuntime.wrap(function _loop$(_context8){while(1){switch(_context8.prev=_context8.next){case 0:_context8.next=2;return (0,_effects.take)(event);case 2:action=_context8.sent;_context8.next=5;return (0,_effects.fork)(saga,action);case 5:task=_context8.sent;tasks.push(babelHelpers.extends({},action,{task:task}));task.done.then(function(){return cleanUp(action.name);}).catch(function(){return cleanUp(action.name);});case 8:case 'end':return _context8.stop();}}},_loop,_this);});case 1:if(!true){_context9.next=5;break;}return _context9.delegateYield(_loop(),'t0',3);case 3:_context9.next=1;break;case 5:case 'end':return _context9.stop();}}},_marked[6],this);}function watchPress(){return regeneratorRuntime.wrap(function watchPress$(_context10){while(1){switch(_context10.prev=_context10.next){case 0:_context10.next=2;return watchTask(_constants.SOUND.PLAY_BEGIN,onPress);case 2:case 'end':return _context10.stop();}}},_marked[7],this);}function watchLongPress(){return regeneratorRuntime.wrap(function watchLongPress$(_context11){while(1){switch(_context11.prev=_context11.next){case 0:_context11.next=2;return watchTask(_constants.SOUND.PLAY_BEGIN_LONG,onLongPress);case 2:case 'end':return _context11.stop();}}},_marked[8],this);}function root(){return regeneratorRuntime.wrap(function root$(_context12){while(1){switch(_context12.prev=_context12.next){case 0:_context12.next=2;return (
+root;var _effects=require(716 /* redux-saga/effects */);var _lodash=require(695 /* lodash */);var _constants=require(689 /* ../constants */);var _actions=require(698 /* ../actions */);var actions=babelHelpers.interopRequireWildcard(_actions);var _services=require(717 /* ../services */);var _marked=[cancelAll,doPlay,doPause,doResume,onLongPress,onPress,watchTask,watchPress,watchLongPress,root].map(regeneratorRuntime.mark);var currentSounds=function currentSounds(state){return state.sound.current;};function cancelAll(songs){return regeneratorRuntime.wrap(function cancelAll$(_context2){while(1){switch(_context2.prev=_context2.next){case 0:_context2.next=2;return songs.map(regeneratorRuntime.mark(function mapFunc(_ref){var $sound=_ref.$sound;var name=_ref.name;return regeneratorRuntime.wrap(function mapFunc$(_context){while(1){switch(_context.prev=_context.next){case 0:cleanUp(name);_context.next=3;return (0,_effects.put)(actions.playSongEnd(name));case 3:return _context.abrupt('return',_services.SoundPlayer.stop($sound));case 4:case 'end':return _context.stop();}}},mapFunc,this);}));case 2:return _context2.abrupt('return',_context2.sent);case 3:case 'end':return _context2.stop();}}},_marked[0],this);}var tasks=[];function doPlay(name,file){var sound;return regeneratorRuntime.wrap(function doPlay$(_context3){while(1){switch(_context3.prev=_context3.next){case 0:_context3.prev=0;_context3.next=3;return (0,_effects.call)(_services.SoundPlayer.loadSound.bind(_services.SoundPlayer),file);case 3:sound=_context3.sent;_context3.next=6;return (0,_effects.put)(actions.playSong(name,file,sound));case 6:_context3.next=8;return (0,_effects.call)(_services.SoundPlayer.play.bind(_services.SoundPlayer),sound);case 8:_context3.next=10;return (0,_effects.put)(actions.playSongEnd(name));case 10:return _context3.abrupt('return',_context3.sent);case 13:_context3.prev=13;_context3.t0=_context3['catch'](0);_context3.next=17;return (0,_effects.put)(actions.playError(name,_context3.t0));case 17:case 'end':return _context3.stop();}}},_marked[1],this,[[0,13]]);}function doPause(name,sound){return regeneratorRuntime.wrap(function doPause$(_context4){while(1){switch(_context4.prev=_context4.next){case 0:_context4.next=2;return (0,_effects.put)(actions.pauseSong(name));case 2:return _context4.abrupt('return',_services.SoundPlayer.pause(sound));case 3:case 'end':return _context4.stop();}}},_marked[2],this);}function doResume(name,sound){return regeneratorRuntime.wrap(function doResume$(_context5){while(1){switch(_context5.prev=_context5.next){case 0:_context5.next=2;return (0,_effects.put)(actions.resumeSong(name));case 2:_context5.next=4;return (0,_effects.call)(_services.SoundPlayer.play.bind(_services.SoundPlayer),sound);case 4:_context5.next=6;return (0,_effects.put)(actions.playSongEnd(name));case 6:case 'end':return _context5.stop();}}},_marked[3],this);}function onLongPress(action){var name,file,current,currentSong;return regeneratorRuntime.wrap(function onLongPress$(_context6){while(1){switch(_context6.prev=_context6.next){case 0:name=action.name;file=action.file;_context6.next=4;return (0,_effects.select)(currentSounds);case 4:current=_context6.sent;_context6.prev=5;currentSong=(0,_lodash.find)(current,{name:name});if(!currentSong){_context6.next=11;break;}return _context6.delegateYield(doPause(currentSong.name,currentSong.$sound),'t0',9);case 9:_context6.next=12;break;case 11:return _context6.delegateYield(doPlay(name,file),'t1',12);case 12:_context6.next=18;break;case 14:_context6.prev=14;_context6.t2=_context6['catch'](5);_context6.next=18;return (0,_effects.put)(actions.playError(name,_context6.t2));case 18:case 'end':return _context6.stop();}}},_marked[4],this,[[5,14]]);}function onPress(action){var name,file,current,currentPlaying,currentSong,_currentSong;return regeneratorRuntime.wrap(function onPress$(_context7){while(1){switch(_context7.prev=_context7.next){case 0:name=action.name;file=action.file;_context7.next=4;return (0,_effects.select)(currentSounds);case 4:current=_context7.sent;currentPlaying=(0,_lodash.filter)(current,{playing:true});_context7.prev=6;if(!currentPlaying.length){_context7.next=18;break;}currentSong=(0,_lodash.find)(currentPlaying,{name:name});if(!currentSong){_context7.next=13;break;}return _context7.delegateYield(doPause(currentSong.name,currentSong.$sound),'t0',11);case 11:_context7.next=16;break;case 13:_context7.next=15;return cancelAll(currentPlaying);case 15:return _context7.delegateYield(doPlay(name,file),'t1',16);case 16:_context7.next=24;break;case 18:_currentSong=(0,_lodash.find)(current,{name:name});if(!_currentSong){_context7.next=23;break;}return _context7.delegateYield(doResume(_currentSong.name,_currentSong.$sound),'t2',21);case 21:_context7.next=24;break;case 23:return _context7.delegateYield(doPlay(name,file),'t3',24);case 24:_context7.next=30;break;case 26:_context7.prev=26;_context7.t4=_context7['catch'](6);_context7.next=30;return (0,_effects.put)(actions.playError(name,_context7.t4));case 30:case 'end':return _context7.stop();}}},_marked[5],this,[[6,26]]);}function cleanUp(name){var newTasks=tasks.slice();(0,_lodash.remove)(newTasks,{name:name});tasks=newTasks;}function watchTask(event,saga){var _this=this;var _loop;return regeneratorRuntime.wrap(function watchTask$(_context9){while(1){switch(_context9.prev=_context9.next){case 0:_loop=regeneratorRuntime.mark(function _loop(){var action,task;return regeneratorRuntime.wrap(function _loop$(_context8){while(1){switch(_context8.prev=_context8.next){case 0:_context8.next=2;return (0,_effects.take)(event);case 2:action=_context8.sent;_context8.next=5;return (0,_effects.fork)(saga,action);case 5:task=_context8.sent;tasks.push(babelHelpers.extends({},action,{task:task}));task.done.then(function(){return cleanUp(action.name);}).catch(function(){return cleanUp(action.name);});case 8:case 'end':return _context8.stop();}}},_loop,_this);});case 1:if(!true){_context9.next=5;break;}return _context9.delegateYield(_loop(),'t0',3);case 3:_context9.next=1;break;case 5:case 'end':return _context9.stop();}}},_marked[6],this);}function watchPress(){return regeneratorRuntime.wrap(function watchPress$(_context10){while(1){switch(_context10.prev=_context10.next){case 0:_context10.next=2;return watchTask(_constants.SOUND.PLAY_BEGIN,onPress);case 2:case 'end':return _context10.stop();}}},_marked[7],this);}function watchLongPress(){return regeneratorRuntime.wrap(function watchLongPress$(_context11){while(1){switch(_context11.prev=_context11.next){case 0:_context11.next=2;return watchTask(_constants.SOUND.PLAY_BEGIN_LONG,onLongPress);case 2:case 'end':return _context11.stop();}}},_marked[8],this);}function root(){return regeneratorRuntime.wrap(function root$(_context12){while(1){switch(_context12.prev=_context12.next){case 0:_context12.next=2;return (
 [
 (0,_effects.fork)(watchPress),
 (0,_effects.fork)(watchLongPress)]);case 2:case 'end':return _context12.stop();}}},_marked[9],this);}
@@ -100665,7 +100796,7 @@ __d(721 /* sounds/src/reducers/sound.js */, function(global, require, module, ex
 
 
 
-setState;var _lodash=require(695 /* lodash */);var _constants=require(723 /* ../constants */);var INITIAL_STATE={playing:false,current:[]};function playSong(state,name,file,sound){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(!currentSong){current.push({name:name,file:file,$sound:sound,playing:true});return babelHelpers.extends({},state,{current:current});}else {return state;}}function pauseSong(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong.playing=false;return babelHelpers.extends({},state,{current:current});}else {return state;}}function resumeSong(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong.playing=true;return babelHelpers.extends({},state,{current:current});}else {return state;}}function playSongEnd(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){(0,_lodash.remove)(current,{name:name});return babelHelpers.extends({},state,{current:current});}else {return state;}}function playError(state,name,error){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong=(0,_lodash.merge)(currentSong,{name:null,error:error});return babelHelpers.extends({},state,{current:current});}else {return state;}}function setState(){var state=arguments.length<=0||arguments[0]===undefined?INITIAL_STATE:arguments[0];var action=arguments[1];
+setState;var _lodash=require(695 /* lodash */);var _constants=require(689 /* ../constants */);var INITIAL_STATE={playing:false,current:[]};function playSong(state,name,file,sound){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(!currentSong){current.push({name:name,file:file,$sound:sound,playing:true});return babelHelpers.extends({},state,{current:current});}else {return state;}}function pauseSong(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong.playing=false;return babelHelpers.extends({},state,{current:current});}else {return state;}}function resumeSong(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong.playing=true;return babelHelpers.extends({},state,{current:current});}else {return state;}}function playSongEnd(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){(0,_lodash.remove)(current,{name:name});return babelHelpers.extends({},state,{current:current});}else {return state;}}function playError(state,name,error){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong=(0,_lodash.merge)(currentSong,{name:null,error:error});return babelHelpers.extends({},state,{current:current});}else {return state;}}function setState(){var state=arguments.length<=0||arguments[0]===undefined?INITIAL_STATE:arguments[0];var action=arguments[1];
 if(action.type===_constants.SOUND.PLAY){
 return playSong(state,action.name,action.file,action.sound);}else 
 if(action.type===_constants.SOUND.PAUSE){
@@ -100707,7 +100838,7 @@ __d(722 /* sounds/src/reducers/view.js */, function(global, require, module, exp
 
 
 
-setState;var _constants=require(723 /* ../constants */);var _lodash=require(695 /* lodash */);var INITIAL_STATE={views:Object.keys(_constants.VIEW_LIBRARY).reduce(function(acc,view){acc[view]={index:0};return acc;},{}),current:Object.keys(_constants.VIEW_LIBRARY)[0]};function selectTab(state,name){return babelHelpers.extends({},state,{current:name});}function setView(state,name,index){var views=(0,_lodash.cloneDeep)(state.views);views[name].index=index;return babelHelpers.extends({},state,{views:views});}function setState(){var state=arguments.length<=0||arguments[0]===undefined?INITIAL_STATE:arguments[0];var action=arguments[1];
+setState;var _constants=require(689 /* ../constants */);var _lodash=require(695 /* lodash */);var INITIAL_STATE={views:Object.keys(_constants.VIEW_LIBRARY).reduce(function(acc,view){acc[view]={index:0};return acc;},{}),current:Object.keys(_constants.VIEW_LIBRARY)[0]};function selectTab(state,name){return babelHelpers.extends({},state,{current:name});}function setView(state,name,index){var views=(0,_lodash.cloneDeep)(state.views);views[name].index=index;return babelHelpers.extends({},state,{views:views});}function setState(){var state=arguments.length<=0||arguments[0]===undefined?INITIAL_STATE:arguments[0];var action=arguments[1];
 if(action.type===_constants.VIEW.SELECT){
 return selectTab(state,action.name);}else 
 if(action.type===_constants.VIEW.SET){
@@ -100718,4 +100849,4 @@ return state;}
 ;require(99);
 ;require(27);
 ;require(0);
-__SSTOKENSTRING = "@generated SignedSource<<ba4b4078498e383b75dd67e348206ef9>>";
+__SSTOKENSTRING = "@generated SignedSource<<2ac954cdad0d240340bce098c0cc05a1>>";

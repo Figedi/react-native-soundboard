@@ -36,13 +36,15 @@ class SoundView extends Component {
     eachChunks(SOUND_MAX, sounds, (bunch) => {
       out.push(this.renderView(bunch));
     });
-    let index = this.props.views && this.props.views[this.props.view].index || 0;
+    const index = this.props.views && this.props.views[this.props.view].index || 0;
+    const { height } = Dimensions.get('window');
     return (
       <Swiper
         index={index}
         loop={false}
         showsButtons
         paginationStyle={styles.pagination}
+        style={[{ height: height - 50 }]}
         onMomentumScrollEnd={this._onMomentumScrollEnd}
       >
         {out}
