@@ -30,8 +30,8 @@ class SoundView extends Component {
   }
 
   renderViewSwiped() {
-    let sounds = this.props.sounds
 
+    let sounds = this.props.sounds
     let out = [];
     eachChunks(SOUND_MAX, sounds, (bunch) => {
       out.push(this.renderView(bunch));
@@ -44,6 +44,8 @@ class SoundView extends Component {
         loop={false}
         showsButtons
         paginationStyle={styles.pagination}
+        height={height}
+        dot={<View style={{backgroundColor:'rgba(255,255,255,.9)', width: 5, height: 5,borderRadius: 4, marginLeft: 3, marginRight: 3, marginTop: 3, marginBottom: 3 }} />}
         style={[{ height: height - 50 }]}
         onMomentumScrollEnd={this._onMomentumScrollEnd}
       >
@@ -104,6 +106,7 @@ const styles = StyleSheet.create({
   wrapper: {
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'rgba(0,0,0,.85)',
   },
   innerWrapper: {
     padding: 20,

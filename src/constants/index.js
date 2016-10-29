@@ -178,6 +178,10 @@ export const SOUND_LIBRARY = {
   ],
   misc: [
     {
+      name: 'aufpassen',
+      file: './assets/sounds/misc/aufpassen.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/aufpassen.jpg`,
+    }, {
       name: 'cilantro',
       file: './assets/sounds/misc/cilantro.mp3',
       uri: `${RNFS.MainBundlePath}/assets/images/misc/cilantro.png`,
@@ -245,6 +249,34 @@ export const SOUND_LIBRARY = {
       name: 'zonk',
       file: './assets/sounds/misc/zonk.mp3',
       uri: `${RNFS.MainBundlePath}/assets/images/misc/zonk.jpg`,
+    }, {
+      name: 'Alkohol_Neige',
+      file: './assets/sounds/misc/Alkohol_Neige.wav',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/Alcohol_Neige.jpg`,
+    }, {
+      name: 'Alkohol_Mangel',
+      file: './assets/sounds/misc/Alkohol_Mangel.wav',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/Alkohol_Mangel.png`,
+    }, {
+      name: 'Kleidung_1',
+      file: './assets/sounds/misc/Kleidung_1.wav',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/Kleidung_1.jpg`,
+    }, {
+      name: 'Kerker_2',
+      file: './assets/sounds/misc/Kerker_2.wav',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/Kerker_2.jpg`,
+    }, {
+      name: 'Badehaus',
+      file: './assets/sounds/misc/Badehaus.wav',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/Badehaus.jpg`,
+    }, {
+      name: 'bing_bong',
+      file: './assets/sounds/misc/bing_bong.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/bing_bong.jpg`,
+    }, {
+      name: 'john_cena',
+      file: './assets/sounds/misc/john_cena.mp3',
+      uri: `${RNFS.MainBundlePath}/assets/images/misc/john_cena.jpg`,
     },
   ],
 }
