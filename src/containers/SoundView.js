@@ -2,10 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
 import { connect } from 'react-redux';
 import Swiper from 'react-native-swiper';
-import { find } from 'lodash';
+import { find, chunk } from 'lodash';
 import autobind from 'autobind-decorator';
 
-import { eachChunks } from '../common/utils';
 import * as mapDispatchToProps from '../actions'
 import { SoundItem } from '../components';
 
@@ -32,12 +31,9 @@ class SoundView extends Component {
   renderViewSwiped() {
 
     let sounds = this.props.sounds
-    let out = [];
-    eachChunks(SOUND_MAX, sounds, (bunch) => {
-      out.push(this.renderView(bunch));
-    });
     const index = this.props.views && this.props.views[this.props.view].index || 0;
     const { height } = Dimensions.get('window');
+    const soundViews = chunk(sounds, SOUND_MAX).map((bunch) => this.renderView(bunch));
     return (
       <Swiper
         index={index}
@@ -49,7 +45,7 @@ class SoundView extends Component {
         style={[{ height: height - 50 }]}
         onMomentumScrollEnd={this._onMomentumScrollEnd}
       >
-        {out}
+        {soundViews}
       </Swiper>
     );
   }
