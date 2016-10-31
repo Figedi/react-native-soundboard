@@ -71345,8 +71345,8 @@ var _reactNative=require(11 /* react-native */);
 var _reactRedux=require(551 /* react-redux */);
 var _FontAwesome=require(578 /* react-native-vector-icons/FontAwesome */);var _FontAwesome2=babelHelpers.interopRequireDefault(_FontAwesome);
 
-var _constants=require(689 /* ../constants */);
-var _SoundView=require(723 /* ./SoundView */);var _SoundView2=babelHelpers.interopRequireDefault(_SoundView);
+var _constants=require(723 /* ../constants */);
+var _SoundView=require(693 /* ./SoundView */);var _SoundView2=babelHelpers.interopRequireDefault(_SoundView);
 
 var _actions=require(698 /* ../actions */);var mapDispatchToProps=babelHelpers.interopRequireWildcard(_actions);var 
 
@@ -75510,7 +75510,7 @@ this.updateIconSources(nextProps);}}}},{key:'render',value:function render()
 {
 return _react2.default.createElement(_reactNative.ToolbarAndroid,babelHelpers.extends({},this.props,this.state));}}]);return IconToolbarAndroid;}(_react.Component),_class.propTypes={navIconName:IconNamePropType,overflowIconName:IconNamePropType,actions:_react.PropTypes.arrayOf(_react.PropTypes.shape({title:_react.PropTypes.string.isRequired,iconName:IconNamePropType,iconSize:_react.PropTypes.number,iconColor:_react.PropTypes.string,show:_react.PropTypes.oneOf(['always','ifRoom','never']),showWithText:_react.PropTypes.bool})),iconSize:_react.PropTypes.number,iconColor:_react.PropTypes.string},_class.defaultProps={iconSize:24},_temp;}
 });
-__d(689 /* sounds/src/constants/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.SOUND_LIBRARY=exports.VIEW_LIBRARY=exports.VIEW=exports.SOUND=undefined;var _reactNativeFs=require(690 /* react-native-fs */);var _reactNativeFs2=babelHelpers.interopRequireDefault(_reactNativeFs);
+__d(723 /* sounds/src/constants/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.SOUND_LIBRARY=exports.VIEW_LIBRARY=exports.VIEW=exports.SOUND=undefined;var _reactNativeFs=require(689 /* react-native-fs */);var _reactNativeFs2=babelHelpers.interopRequireDefault(_reactNativeFs);
 
 var SOUND=exports.SOUND={
 PLAY:'PLAY',
@@ -75690,6 +75690,10 @@ uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/kittens/kitten14.jpg'
 
 misc:[
 {
+name:'aufpassen',
+file:'./assets/sounds/misc/aufpassen.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/aufpassen.jpg'},
+{
 name:'cilantro',
 file:'./assets/sounds/misc/cilantro.mp3',
 uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/cilantro.png'},
@@ -75756,9 +75760,37 @@ uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/wwm_stufe.jpg'},
 {
 name:'zonk',
 file:'./assets/sounds/misc/zonk.mp3',
-uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/zonk.jpg'}]};
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/zonk.jpg'},
+{
+name:'Alkohol_Neige',
+file:'./assets/sounds/misc/Alkohol_Neige.wav',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/Alcohol_Neige.jpg'},
+{
+name:'Alkohol_Mangel',
+file:'./assets/sounds/misc/Alkohol_Mangel.wav',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/Alkohol_Mangel.png'},
+{
+name:'Kleidung_1',
+file:'./assets/sounds/misc/Kleidung_1.wav',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/Kleidung_1.jpg'},
+{
+name:'Kerker_2',
+file:'./assets/sounds/misc/Kerker_2.wav',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/Kerker_2.jpg'},
+{
+name:'Badehaus',
+file:'./assets/sounds/misc/Badehaus.wav',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/Badehaus.jpg'},
+{
+name:'bing_bong',
+file:'./assets/sounds/misc/bing_bong.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/bing_bong.jpg'},
+{
+name:'john_cena',
+file:'./assets/sounds/misc/john_cena.mp3',
+uri:_reactNativeFs2.default.MainBundlePath+'/assets/images/misc/john_cena.jpg'}]};
 });
-__d(690 /* react-native-fs/FS.common.js */, function(global, require, module, exports) {'use strict';
+__d(689 /* react-native-fs/FS.common.js */, function(global, require, module, exports) {'use strict';
 
 
 
@@ -75770,9 +75802,9 @@ global.self=global;}
 var RNFSManager=require(11 /* react-native */).NativeModules.RNFSManager;
 var NativeAppEventEmitter=require(11 /* react-native */).NativeAppEventEmitter;
 var DeviceEventEmitter=require(11 /* react-native */).DeviceEventEmitter;
-var Promise=require(691 /* bluebird */);
-var base64=require(692 /* base-64 */);
-var utf8=require(693 /* utf8 */);
+var Promise=require(690 /* bluebird */);
+var base64=require(691 /* base-64 */);
+var utf8=require(692 /* utf8 */);
 
 var _readDir=Promise.promisify(RNFSManager.readDir);
 var _exists=Promise.promisify(RNFSManager.exists);
@@ -75956,7 +75988,7 @@ PicturesDirectoryPath:RNFSManager.NSPicturesDirectoryPath};
 
 module.exports=RNFS;
 });
-__d(691 /* bluebird/js/browser/bluebird.js */, function(global, require, module, exports) {/* @preserve
+__d(690 /* bluebird/js/browser/bluebird.js */, function(global, require, module, exports) {/* @preserve
  * The MIT License (MIT)
  * 
  * Copyright (c) 2013-2015 Petka Antonov
@@ -80844,7 +80876,7 @@ module.exports=ret;},
 {"./es5.js":14}]},{},[4])(4);});
 ;if(typeof window!=='undefined'&&window!==null){window.P=window.Promise;}else if(typeof self!=='undefined'&&self!==null){self.P=self.Promise;}
 });
-__d(692 /* base-64/base64.js */, function(global, require, module, exports) {;
+__d(691 /* base-64/base64.js */, function(global, require, module, exports) {;
 (function(root){
 
 
@@ -81010,7 +81042,7 @@ root.base64=base64;}})(
 
 this);
 });
-__d(693 /* utf8/utf8.js */, function(global, require, module, exports) {;
+__d(692 /* utf8/utf8.js */, function(global, require, module, exports) {;
 (function(root){
 
 
@@ -81255,7 +81287,7 @@ root.utf8=utf8;}})(
 
 this);
 });
-__d(723 /* sounds/src/containers/SoundView.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _desc,_value,_class,_class2,_temp;var _react=require(380 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
+__d(693 /* sounds/src/containers/SoundView.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _desc,_value,_class,_class2,_temp;var _react=require(380 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
 var _reactNative=require(11 /* react-native */);
 var _reactRedux=require(551 /* react-redux */);
 var _reactNativeSwiper=require(694 /* react-native-swiper */);var _reactNativeSwiper2=babelHelpers.interopRequireDefault(_reactNativeSwiper);
@@ -81287,8 +81319,9 @@ this.props.setView(this.props.view,state.index);}},{key:'renderViewSwiped',value
 
 
 {var _this2=this;
-var sounds=this.props.sounds;
 
+var sounds=this.props.sounds;
+console.log('sounds are',sounds);
 var out=[];
 (0,_utils.eachChunks)(SOUND_MAX,sounds,function(bunch){
 out.push(_this2.renderView(bunch));});
@@ -81301,6 +81334,8 @@ index:index,
 loop:false,
 showsButtons:true,
 paginationStyle:styles.pagination,
+height:height,
+dot:_react2.default.createElement(_reactNative.View,{style:{backgroundColor:'rgba(255,255,255,.9)',width:5,height:5,borderRadius:4,marginLeft:3,marginRight:3,marginTop:3,marginBottom:3}}),
 style:[{height:height-50}],
 onMomentumScrollEnd:this._onMomentumScrollEnd},
 
@@ -81360,7 +81395,8 @@ flex:0},
 
 wrapper:{
 alignItems:'center',
-justifyContent:'center'},
+justifyContent:'center',
+backgroundColor:'rgba(0,0,0,.85)'},
 
 innerWrapper:{
 padding:20,
@@ -98429,7 +98465,7 @@ selectTab=selectTab;exports.
 
 
 
-setView=setView;var _constants=require(689 /* ../constants */);function beginPlaySong(name,file){return {type:_constants.SOUND.PLAY_BEGIN,name:name,file:file};}function beginPlayLong(name,file){return {type:_constants.SOUND.PLAY_BEGIN_LONG,name:name,file:file};}function playSong(name,file,sound){return {type:_constants.SOUND.PLAY,name:name,file:file,sound:sound};}function pauseSong(name){return {type:_constants.SOUND.PAUSE,name:name};}function resumeSong(name){return {type:_constants.SOUND.RESUME,name:name};}function playSongEnd(name){return {type:_constants.SOUND.PLAY_END,name:name};}function playError(name,error){return {type:_constants.SOUND.PLAY_ERROR,name:name,error:error};}function selectTab(name){return {type:_constants.VIEW.SELECT,name:name};}function setView(name,index){
+setView=setView;var _constants=require(723 /* ../constants */);function beginPlaySong(name,file){return {type:_constants.SOUND.PLAY_BEGIN,name:name,file:file};}function beginPlayLong(name,file){return {type:_constants.SOUND.PLAY_BEGIN_LONG,name:name,file:file};}function playSong(name,file,sound){return {type:_constants.SOUND.PLAY,name:name,file:file,sound:sound};}function pauseSong(name){return {type:_constants.SOUND.PAUSE,name:name};}function resumeSong(name){return {type:_constants.SOUND.RESUME,name:name};}function playSongEnd(name){return {type:_constants.SOUND.PLAY_END,name:name};}function playError(name,error){return {type:_constants.SOUND.PLAY_ERROR,name:name,error:error};}function selectTab(name){return {type:_constants.VIEW.SELECT,name:name};}function setView(name,index){
 return {
 type:_constants.VIEW.SET,
 name:name,
@@ -100476,7 +100512,7 @@ __d(715 /* sounds/src/sagas/sound.js */, function(global, require, module, expor
 
 
 
-root;var _effects=require(716 /* redux-saga/effects */);var _lodash=require(695 /* lodash */);var _constants=require(689 /* ../constants */);var _actions=require(698 /* ../actions */);var actions=babelHelpers.interopRequireWildcard(_actions);var _services=require(717 /* ../services */);var _marked=[cancelAll,doPlay,doPause,doResume,onLongPress,onPress,watchTask,watchPress,watchLongPress,root].map(regeneratorRuntime.mark);var currentSounds=function currentSounds(state){return state.sound.current;};function cancelAll(songs){return regeneratorRuntime.wrap(function cancelAll$(_context2){while(1){switch(_context2.prev=_context2.next){case 0:_context2.next=2;return songs.map(regeneratorRuntime.mark(function mapFunc(_ref){var $sound=_ref.$sound;var name=_ref.name;return regeneratorRuntime.wrap(function mapFunc$(_context){while(1){switch(_context.prev=_context.next){case 0:cleanUp(name);_context.next=3;return (0,_effects.put)(actions.playSongEnd(name));case 3:return _context.abrupt('return',_services.SoundPlayer.stop($sound));case 4:case 'end':return _context.stop();}}},mapFunc,this);}));case 2:return _context2.abrupt('return',_context2.sent);case 3:case 'end':return _context2.stop();}}},_marked[0],this);}var tasks=[];function doPlay(name,file){var sound;return regeneratorRuntime.wrap(function doPlay$(_context3){while(1){switch(_context3.prev=_context3.next){case 0:_context3.prev=0;_context3.next=3;return (0,_effects.call)(_services.SoundPlayer.loadSound.bind(_services.SoundPlayer),file);case 3:sound=_context3.sent;_context3.next=6;return (0,_effects.put)(actions.playSong(name,file,sound));case 6:_context3.next=8;return (0,_effects.call)(_services.SoundPlayer.play.bind(_services.SoundPlayer),sound);case 8:_context3.next=10;return (0,_effects.put)(actions.playSongEnd(name));case 10:return _context3.abrupt('return',_context3.sent);case 13:_context3.prev=13;_context3.t0=_context3['catch'](0);_context3.next=17;return (0,_effects.put)(actions.playError(name,_context3.t0));case 17:case 'end':return _context3.stop();}}},_marked[1],this,[[0,13]]);}function doPause(name,sound){return regeneratorRuntime.wrap(function doPause$(_context4){while(1){switch(_context4.prev=_context4.next){case 0:_context4.next=2;return (0,_effects.put)(actions.pauseSong(name));case 2:return _context4.abrupt('return',_services.SoundPlayer.pause(sound));case 3:case 'end':return _context4.stop();}}},_marked[2],this);}function doResume(name,sound){return regeneratorRuntime.wrap(function doResume$(_context5){while(1){switch(_context5.prev=_context5.next){case 0:_context5.next=2;return (0,_effects.put)(actions.resumeSong(name));case 2:_context5.next=4;return (0,_effects.call)(_services.SoundPlayer.play.bind(_services.SoundPlayer),sound);case 4:_context5.next=6;return (0,_effects.put)(actions.playSongEnd(name));case 6:case 'end':return _context5.stop();}}},_marked[3],this);}function onLongPress(action){var name,file,current,currentSong;return regeneratorRuntime.wrap(function onLongPress$(_context6){while(1){switch(_context6.prev=_context6.next){case 0:name=action.name;file=action.file;_context6.next=4;return (0,_effects.select)(currentSounds);case 4:current=_context6.sent;_context6.prev=5;currentSong=(0,_lodash.find)(current,{name:name});if(!currentSong){_context6.next=11;break;}return _context6.delegateYield(doPause(currentSong.name,currentSong.$sound),'t0',9);case 9:_context6.next=12;break;case 11:return _context6.delegateYield(doPlay(name,file),'t1',12);case 12:_context6.next=18;break;case 14:_context6.prev=14;_context6.t2=_context6['catch'](5);_context6.next=18;return (0,_effects.put)(actions.playError(name,_context6.t2));case 18:case 'end':return _context6.stop();}}},_marked[4],this,[[5,14]]);}function onPress(action){var name,file,current,currentPlaying,currentSong,_currentSong;return regeneratorRuntime.wrap(function onPress$(_context7){while(1){switch(_context7.prev=_context7.next){case 0:name=action.name;file=action.file;_context7.next=4;return (0,_effects.select)(currentSounds);case 4:current=_context7.sent;currentPlaying=(0,_lodash.filter)(current,{playing:true});_context7.prev=6;if(!currentPlaying.length){_context7.next=18;break;}currentSong=(0,_lodash.find)(currentPlaying,{name:name});if(!currentSong){_context7.next=13;break;}return _context7.delegateYield(doPause(currentSong.name,currentSong.$sound),'t0',11);case 11:_context7.next=16;break;case 13:_context7.next=15;return cancelAll(currentPlaying);case 15:return _context7.delegateYield(doPlay(name,file),'t1',16);case 16:_context7.next=24;break;case 18:_currentSong=(0,_lodash.find)(current,{name:name});if(!_currentSong){_context7.next=23;break;}return _context7.delegateYield(doResume(_currentSong.name,_currentSong.$sound),'t2',21);case 21:_context7.next=24;break;case 23:return _context7.delegateYield(doPlay(name,file),'t3',24);case 24:_context7.next=30;break;case 26:_context7.prev=26;_context7.t4=_context7['catch'](6);_context7.next=30;return (0,_effects.put)(actions.playError(name,_context7.t4));case 30:case 'end':return _context7.stop();}}},_marked[5],this,[[6,26]]);}function cleanUp(name){var newTasks=tasks.slice();(0,_lodash.remove)(newTasks,{name:name});tasks=newTasks;}function watchTask(event,saga){var _this=this;var _loop;return regeneratorRuntime.wrap(function watchTask$(_context9){while(1){switch(_context9.prev=_context9.next){case 0:_loop=regeneratorRuntime.mark(function _loop(){var action,task;return regeneratorRuntime.wrap(function _loop$(_context8){while(1){switch(_context8.prev=_context8.next){case 0:_context8.next=2;return (0,_effects.take)(event);case 2:action=_context8.sent;_context8.next=5;return (0,_effects.fork)(saga,action);case 5:task=_context8.sent;tasks.push(babelHelpers.extends({},action,{task:task}));task.done.then(function(){return cleanUp(action.name);}).catch(function(){return cleanUp(action.name);});case 8:case 'end':return _context8.stop();}}},_loop,_this);});case 1:if(!true){_context9.next=5;break;}return _context9.delegateYield(_loop(),'t0',3);case 3:_context9.next=1;break;case 5:case 'end':return _context9.stop();}}},_marked[6],this);}function watchPress(){return regeneratorRuntime.wrap(function watchPress$(_context10){while(1){switch(_context10.prev=_context10.next){case 0:_context10.next=2;return watchTask(_constants.SOUND.PLAY_BEGIN,onPress);case 2:case 'end':return _context10.stop();}}},_marked[7],this);}function watchLongPress(){return regeneratorRuntime.wrap(function watchLongPress$(_context11){while(1){switch(_context11.prev=_context11.next){case 0:_context11.next=2;return watchTask(_constants.SOUND.PLAY_BEGIN_LONG,onLongPress);case 2:case 'end':return _context11.stop();}}},_marked[8],this);}function root(){return regeneratorRuntime.wrap(function root$(_context12){while(1){switch(_context12.prev=_context12.next){case 0:_context12.next=2;return (
+root;var _effects=require(716 /* redux-saga/effects */);var _lodash=require(695 /* lodash */);var _constants=require(723 /* ../constants */);var _actions=require(698 /* ../actions */);var actions=babelHelpers.interopRequireWildcard(_actions);var _services=require(717 /* ../services */);var _marked=[cancelAll,doPlay,doPause,doResume,onLongPress,onPress,watchTask,watchPress,watchLongPress,root].map(regeneratorRuntime.mark);var currentSounds=function currentSounds(state){return state.sound.current;};function cancelAll(songs){return regeneratorRuntime.wrap(function cancelAll$(_context2){while(1){switch(_context2.prev=_context2.next){case 0:_context2.next=2;return songs.map(regeneratorRuntime.mark(function mapFunc(_ref){var $sound=_ref.$sound;var name=_ref.name;return regeneratorRuntime.wrap(function mapFunc$(_context){while(1){switch(_context.prev=_context.next){case 0:cleanUp(name);_context.next=3;return (0,_effects.put)(actions.playSongEnd(name));case 3:return _context.abrupt('return',_services.SoundPlayer.stop($sound));case 4:case 'end':return _context.stop();}}},mapFunc,this);}));case 2:return _context2.abrupt('return',_context2.sent);case 3:case 'end':return _context2.stop();}}},_marked[0],this);}var tasks=[];function doPlay(name,file){var sound;return regeneratorRuntime.wrap(function doPlay$(_context3){while(1){switch(_context3.prev=_context3.next){case 0:_context3.prev=0;_context3.next=3;return (0,_effects.call)(_services.SoundPlayer.loadSound.bind(_services.SoundPlayer),file);case 3:sound=_context3.sent;_context3.next=6;return (0,_effects.put)(actions.playSong(name,file,sound));case 6:_context3.next=8;return (0,_effects.call)(_services.SoundPlayer.play.bind(_services.SoundPlayer),sound);case 8:_context3.next=10;return (0,_effects.put)(actions.playSongEnd(name));case 10:return _context3.abrupt('return',_context3.sent);case 13:_context3.prev=13;_context3.t0=_context3['catch'](0);_context3.next=17;return (0,_effects.put)(actions.playError(name,_context3.t0));case 17:case 'end':return _context3.stop();}}},_marked[1],this,[[0,13]]);}function doPause(name,sound){return regeneratorRuntime.wrap(function doPause$(_context4){while(1){switch(_context4.prev=_context4.next){case 0:_context4.next=2;return (0,_effects.put)(actions.pauseSong(name));case 2:return _context4.abrupt('return',_services.SoundPlayer.pause(sound));case 3:case 'end':return _context4.stop();}}},_marked[2],this);}function doResume(name,sound){return regeneratorRuntime.wrap(function doResume$(_context5){while(1){switch(_context5.prev=_context5.next){case 0:_context5.next=2;return (0,_effects.put)(actions.resumeSong(name));case 2:_context5.next=4;return (0,_effects.call)(_services.SoundPlayer.play.bind(_services.SoundPlayer),sound);case 4:_context5.next=6;return (0,_effects.put)(actions.playSongEnd(name));case 6:case 'end':return _context5.stop();}}},_marked[3],this);}function onLongPress(action){var name,file,current,currentSong;return regeneratorRuntime.wrap(function onLongPress$(_context6){while(1){switch(_context6.prev=_context6.next){case 0:name=action.name;file=action.file;_context6.next=4;return (0,_effects.select)(currentSounds);case 4:current=_context6.sent;_context6.prev=5;currentSong=(0,_lodash.find)(current,{name:name});if(!currentSong){_context6.next=11;break;}return _context6.delegateYield(doPause(currentSong.name,currentSong.$sound),'t0',9);case 9:_context6.next=12;break;case 11:return _context6.delegateYield(doPlay(name,file),'t1',12);case 12:_context6.next=18;break;case 14:_context6.prev=14;_context6.t2=_context6['catch'](5);_context6.next=18;return (0,_effects.put)(actions.playError(name,_context6.t2));case 18:case 'end':return _context6.stop();}}},_marked[4],this,[[5,14]]);}function onPress(action){var name,file,current,currentPlaying,currentSong,_currentSong;return regeneratorRuntime.wrap(function onPress$(_context7){while(1){switch(_context7.prev=_context7.next){case 0:name=action.name;file=action.file;_context7.next=4;return (0,_effects.select)(currentSounds);case 4:current=_context7.sent;currentPlaying=(0,_lodash.filter)(current,{playing:true});_context7.prev=6;if(!currentPlaying.length){_context7.next=18;break;}currentSong=(0,_lodash.find)(currentPlaying,{name:name});if(!currentSong){_context7.next=13;break;}return _context7.delegateYield(doPause(currentSong.name,currentSong.$sound),'t0',11);case 11:_context7.next=16;break;case 13:_context7.next=15;return cancelAll(currentPlaying);case 15:return _context7.delegateYield(doPlay(name,file),'t1',16);case 16:_context7.next=24;break;case 18:_currentSong=(0,_lodash.find)(current,{name:name});if(!_currentSong){_context7.next=23;break;}return _context7.delegateYield(doResume(_currentSong.name,_currentSong.$sound),'t2',21);case 21:_context7.next=24;break;case 23:return _context7.delegateYield(doPlay(name,file),'t3',24);case 24:_context7.next=30;break;case 26:_context7.prev=26;_context7.t4=_context7['catch'](6);_context7.next=30;return (0,_effects.put)(actions.playError(name,_context7.t4));case 30:case 'end':return _context7.stop();}}},_marked[5],this,[[6,26]]);}function cleanUp(name){var newTasks=tasks.slice();(0,_lodash.remove)(newTasks,{name:name});tasks=newTasks;}function watchTask(event,saga){var _this=this;var _loop;return regeneratorRuntime.wrap(function watchTask$(_context9){while(1){switch(_context9.prev=_context9.next){case 0:_loop=regeneratorRuntime.mark(function _loop(){var action,task;return regeneratorRuntime.wrap(function _loop$(_context8){while(1){switch(_context8.prev=_context8.next){case 0:_context8.next=2;return (0,_effects.take)(event);case 2:action=_context8.sent;_context8.next=5;return (0,_effects.fork)(saga,action);case 5:task=_context8.sent;tasks.push(babelHelpers.extends({},action,{task:task}));task.done.then(function(){return cleanUp(action.name);}).catch(function(){return cleanUp(action.name);});case 8:case 'end':return _context8.stop();}}},_loop,_this);});case 1:if(!true){_context9.next=5;break;}return _context9.delegateYield(_loop(),'t0',3);case 3:_context9.next=1;break;case 5:case 'end':return _context9.stop();}}},_marked[6],this);}function watchPress(){return regeneratorRuntime.wrap(function watchPress$(_context10){while(1){switch(_context10.prev=_context10.next){case 0:_context10.next=2;return watchTask(_constants.SOUND.PLAY_BEGIN,onPress);case 2:case 'end':return _context10.stop();}}},_marked[7],this);}function watchLongPress(){return regeneratorRuntime.wrap(function watchLongPress$(_context11){while(1){switch(_context11.prev=_context11.next){case 0:_context11.next=2;return watchTask(_constants.SOUND.PLAY_BEGIN_LONG,onLongPress);case 2:case 'end':return _context11.stop();}}},_marked[8],this);}function root(){return regeneratorRuntime.wrap(function root$(_context12){while(1){switch(_context12.prev=_context12.next){case 0:_context12.next=2;return (
 [
 (0,_effects.fork)(watchPress),
 (0,_effects.fork)(watchLongPress)]);case 2:case 'end':return _context12.stop();}}},_marked[9],this);}
@@ -100796,7 +100832,7 @@ __d(721 /* sounds/src/reducers/sound.js */, function(global, require, module, ex
 
 
 
-setState;var _lodash=require(695 /* lodash */);var _constants=require(689 /* ../constants */);var INITIAL_STATE={playing:false,current:[]};function playSong(state,name,file,sound){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(!currentSong){current.push({name:name,file:file,$sound:sound,playing:true});return babelHelpers.extends({},state,{current:current});}else {return state;}}function pauseSong(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong.playing=false;return babelHelpers.extends({},state,{current:current});}else {return state;}}function resumeSong(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong.playing=true;return babelHelpers.extends({},state,{current:current});}else {return state;}}function playSongEnd(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){(0,_lodash.remove)(current,{name:name});return babelHelpers.extends({},state,{current:current});}else {return state;}}function playError(state,name,error){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong=(0,_lodash.merge)(currentSong,{name:null,error:error});return babelHelpers.extends({},state,{current:current});}else {return state;}}function setState(){var state=arguments.length<=0||arguments[0]===undefined?INITIAL_STATE:arguments[0];var action=arguments[1];
+setState;var _lodash=require(695 /* lodash */);var _constants=require(723 /* ../constants */);var INITIAL_STATE={playing:false,current:[]};function playSong(state,name,file,sound){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(!currentSong){current.push({name:name,file:file,$sound:sound,playing:true});return babelHelpers.extends({},state,{current:current});}else {return state;}}function pauseSong(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong.playing=false;return babelHelpers.extends({},state,{current:current});}else {return state;}}function resumeSong(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong.playing=true;return babelHelpers.extends({},state,{current:current});}else {return state;}}function playSongEnd(state,name){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){(0,_lodash.remove)(current,{name:name});return babelHelpers.extends({},state,{current:current});}else {return state;}}function playError(state,name,error){var current=state.current.slice();var currentSong=(0,_lodash.find)(current,{name:name});if(currentSong){currentSong=(0,_lodash.merge)(currentSong,{name:null,error:error});return babelHelpers.extends({},state,{current:current});}else {return state;}}function setState(){var state=arguments.length<=0||arguments[0]===undefined?INITIAL_STATE:arguments[0];var action=arguments[1];
 if(action.type===_constants.SOUND.PLAY){
 return playSong(state,action.name,action.file,action.sound);}else 
 if(action.type===_constants.SOUND.PAUSE){
@@ -100838,7 +100874,7 @@ __d(722 /* sounds/src/reducers/view.js */, function(global, require, module, exp
 
 
 
-setState;var _constants=require(689 /* ../constants */);var _lodash=require(695 /* lodash */);var INITIAL_STATE={views:Object.keys(_constants.VIEW_LIBRARY).reduce(function(acc,view){acc[view]={index:0};return acc;},{}),current:Object.keys(_constants.VIEW_LIBRARY)[0]};function selectTab(state,name){return babelHelpers.extends({},state,{current:name});}function setView(state,name,index){var views=(0,_lodash.cloneDeep)(state.views);views[name].index=index;return babelHelpers.extends({},state,{views:views});}function setState(){var state=arguments.length<=0||arguments[0]===undefined?INITIAL_STATE:arguments[0];var action=arguments[1];
+setState;var _constants=require(723 /* ../constants */);var _lodash=require(695 /* lodash */);var INITIAL_STATE={views:Object.keys(_constants.VIEW_LIBRARY).reduce(function(acc,view){acc[view]={index:0};return acc;},{}),current:Object.keys(_constants.VIEW_LIBRARY)[0]};function selectTab(state,name){return babelHelpers.extends({},state,{current:name});}function setView(state,name,index){var views=(0,_lodash.cloneDeep)(state.views);views[name].index=index;return babelHelpers.extends({},state,{views:views});}function setState(){var state=arguments.length<=0||arguments[0]===undefined?INITIAL_STATE:arguments[0];var action=arguments[1];
 if(action.type===_constants.VIEW.SELECT){
 return selectTab(state,action.name);}else 
 if(action.type===_constants.VIEW.SET){
@@ -100849,4 +100885,4 @@ return state;}
 ;require(99);
 ;require(27);
 ;require(0);
-__SSTOKENSTRING = "@generated SignedSource<<2ac954cdad0d240340bce098c0cc05a1>>";
+__SSTOKENSTRING = "@generated SignedSource<<814fb031059ff0df2844913fd2c11929>>";
