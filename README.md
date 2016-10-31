@@ -41,6 +41,7 @@ This app isn't really tested for heavy use, although it is successfully tested o
 - [ ] Clean Code 
 - [ ] Megaphone mode 
 - [ ] Custom Recorded Sounds with camera picture (e.g. "party-mode")
+- [ ] Auto Discovery of assets
 
 ## Contribute 
 
