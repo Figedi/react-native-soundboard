@@ -1,55 +1,53 @@
-import Sound from 'react-native-sound'
+import Sound from 'react-native-sound';
 
 class SoundPlayer {
-
-  constructor() {
-  }
-
   loadSound(file) {
     let sound;
     return new Promise((resolve, reject) => {
       sound = new Sound(file, Sound.MAIN_BUNDLE, (error) => {
         if (error) {
           reject(error);
-        } else { // loaded successfully
+        } else {
+          // loaded successfully
           resolve(sound);
         }
       });
     });
   }
 
-  _doPlay(sound) {
+  doPlay(sound) {
     return new Promise((resolve, reject) => {
       sound.play((success) => {
-        if (success) resolve(); // onEnd
-        else reject(new Error('Playback failed due to audio decoding errors'));
+        if (success) {
+          resolve();
+        } else reject(new Error('Playback failed due to audio decoding errors')); // onEnd
       });
-    })
+    });
   }
 
   play(sound) {
-    return this._doPlay(sound);
+    return this.doPlay(sound);
   }
 
   pause(sound) {
     if (!sound) {
-      return;
+      return Promise.reject();
     }
     return sound.pause();
   }
 
   stop(sound) {
     if (!sound) {
-      return;
+      return Promise.reject();
     }
     this.release(sound);
-    let status = sound.stop();
+    const status = sound.stop();
     return status;
   }
 
   release(sound) {
     if (!sound) {
-      return;
+      return Promise.reject();
     }
     return sound.release();
   }

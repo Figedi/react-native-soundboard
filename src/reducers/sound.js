@@ -17,9 +17,10 @@ const INITIAL_STATE = {
 };
 
 function playSong(state, name, file, sound) {
-  let current = state.current.slice();
-  let currentSong = find(current, { name });
-  if (!currentSong) { // if it doesnt exist yet, add to state
+  const current = state.current.slice();
+  const currentSong = find(current, { name });
+  if (!currentSong) {
+    // if it doesnt exist yet, add to state
     current.push({
       name,
       file,
@@ -29,69 +30,64 @@ function playSong(state, name, file, sound) {
     return {
       ...state,
       current,
-    }
-  } else {
-    return state;
+    };
   }
+  return state;
 }
 
 function pauseSong(state, name) {
-  let current = state.current.slice();
-  let currentSong = find(current, { name });
-  if (currentSong) { // if song exists, change status to not playing
+  const current = state.current.slice();
+  const currentSong = find(current, { name });
+  if (currentSong) {
+    // if song exists, change status to not playing
     currentSong.playing = false;
     return {
       ...state,
       current,
-    }
-  } else {
-    return state;
+    };
   }
+  return state;
 }
 
 function resumeSong(state, name) {
-  let current = state.current.slice();
-  let currentSong = find(current, { name });
-  if (currentSong) { // if song exists, change status to not playing
+  const current = state.current.slice();
+  const currentSong = find(current, { name });
+  if (currentSong) {
+    // if song exists, change status to not playing
     currentSong.playing = true;
     return {
       ...state,
       current,
-    }
-  } else {
-    return state;
+    };
   }
+  return state;
 }
 
-
 function playSongEnd(state, name) {
-  let current = state.current.slice();
-  let currentSong = find(current, { name });
+  const current = state.current.slice();
+  const currentSong = find(current, { name });
   if (currentSong) {
-    remove(current, { name })
+    remove(current, { name });
     return {
       ...state,
       current,
-    }
-  } else {
-    return state;
+    };
   }
+  return state;
 }
 
 function playError(state, name, error) {
-  let current = state.current.slice();
+  const current = state.current.slice();
   let currentSong = find(current, { name });
   if (currentSong) {
     currentSong = merge(currentSong, { name: null, error });
     return {
       ...state,
       current,
-    }
-  } else {
-    return state;
+    };
   }
+  return state;
 }
-
 
 export default function setState(state = INITIAL_STATE, action) {
   if (action.type === SOUND.PLAY) {

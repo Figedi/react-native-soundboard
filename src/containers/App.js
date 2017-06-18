@@ -1,23 +1,36 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { TabBarIOS } from 'react-native';
 import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import { SOUND_LIBRARY as SOUNDS, VIEW_LIBRARY as VIEWS } from '../constants';
+import { VIEW_LIBRARY as VIEWS } from '../constants';
+import { SoundLibrary } from '../services';
 import SoundView from './SoundView';
 
-import * as mapDispatchToProps from '../actions'
+import * as mapDispatchToProps from '../actions';
 
 class App extends Component {
-
   static propTypes = {
     current: PropTypes.string,
     selectTab: PropTypes.func,
+  };
+
+  state = {
+    library: {},
+  };
+
+  componentDidMount() {
+    SoundLibrary.getLibrary().then((library) => {
+      this.setState({
+        library,
+      });
+    });
   }
 
   renderTabBarItems(viewKeys = Object.keys(VIEWS)) {
     return viewKeys.map((itemKey) => {
-      let item = VIEWS[itemKey];
+      const item = VIEWS[itemKey];
       const onPress = () => this.props.selectTab(item.name);
       return (
         <Icon.TabBarItemIOS
@@ -28,15 +41,11 @@ class App extends Component {
           title={item.title}
           onPress={onPress}
         >
-          <SoundView
-            view={itemKey}
-            sounds={SOUNDS[itemKey]}
-          />
+          <SoundView view={itemKey} sounds={this.state.library[itemKey] || []} />
         </Icon.TabBarItemIOS>
       );
     });
   }
-
 
   render() {
     return (
@@ -50,8 +59,7 @@ class App extends Component {
 function mapStateToProps(state) {
   return {
     current: state.view.current,
-  }
+  };
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

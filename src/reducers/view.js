@@ -1,5 +1,6 @@
-import { VIEW, VIEW_LIBRARY } from '../constants';
 import { cloneDeep } from 'lodash';
+
+import { VIEW, VIEW_LIBRARY } from '../constants';
 
 const INITIAL_STATE = {
   views: Object.keys(VIEW_LIBRARY).reduce((acc, view) => {
@@ -17,14 +18,13 @@ function selectTab(state, name) {
 }
 
 function setView(state, name, index) {
-  let views = cloneDeep(state.views);
+  const views = cloneDeep(state.views);
   views[name].index = index;
   return {
     ...state,
     views,
-  }
+  };
 }
-
 
 export default function setState(state = INITIAL_STATE, action) {
   if (action.type === VIEW.SELECT) {

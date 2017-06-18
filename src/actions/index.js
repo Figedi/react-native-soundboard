@@ -7,7 +7,7 @@ export function beginPlaySong(name, file) {
     type: SOUND.PLAY_BEGIN,
     name,
     file,
-  }
+  };
 }
 
 export function beginPlayLong(name, file) {
@@ -15,7 +15,7 @@ export function beginPlayLong(name, file) {
     type: SOUND.PLAY_BEGIN_LONG,
     name,
     file,
-  }
+  };
 }
 
 export function playSong(name, file, sound) {
@@ -24,28 +24,28 @@ export function playSong(name, file, sound) {
     name,
     file,
     sound,
-  }
+  };
 }
 
 export function pauseSong(name) {
   return {
     type: SOUND.PAUSE,
     name,
-  }
+  };
 }
 
 export function resumeSong(name) {
   return {
     type: SOUND.RESUME,
     name,
-  }
+  };
 }
 
 export function playSongEnd(name) {
   return {
     type: SOUND.PLAY_END,
     name,
-  }
+  };
 }
 
 export function playError(name, error) {
@@ -53,7 +53,7 @@ export function playError(name, error) {
     type: SOUND.PLAY_ERROR,
     name,
     error,
-  }
+  };
 }
 
 // ====================== Views
@@ -62,7 +62,7 @@ export function selectTab(name) {
   return {
     type: VIEW.SELECT,
     name,
-  }
+  };
 }
 
 export function setView(name, index) {
@@ -70,5 +70,5 @@ export function setView(name, index) {
     type: VIEW.SET,
     name,
     index,
-  }
+  };
 }
