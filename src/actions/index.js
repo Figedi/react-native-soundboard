@@ -18,12 +18,13 @@ export function beginPlayLong(name, file) {
   };
 }
 
-export function playSong(name, file, sound) {
+export function playSong(name, file, sound, meta) {
   return {
     type: SOUND.PLAY,
     name,
     file,
     sound,
+    meta,
   };
 }
 

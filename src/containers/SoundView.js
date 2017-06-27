@@ -8,6 +8,8 @@ import { find, chunk } from 'lodash';
 
 import * as mapDispatchToProps from '../actions';
 import { SoundItem } from '../components';
+import { VIEW_LIBRARY } from '../constants';
+import { selectCurrentAsArray } from '../selectors';
 
 const SOUND_MAX = 15;
 
@@ -37,9 +39,27 @@ class SoundView extends Component {
     beginPlaySong: PropTypes.func.isRequired,
     setView: PropTypes.func.isRequired,
     view: PropTypes.string.isRequired,
-    current: PropTypes.array,
-    sounds: PropTypes.array.isRequired,
-    views: PropTypes.object.isRequired,
+    current: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+      }),
+    ).isRequired,
+    sounds: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+        file: PropTypes.string,
+        uri: PropTypes.string,
+      }),
+    ).isRequired,
+    views: PropTypes.shape(
+      Object.keys(VIEW_LIBRARY).reduce(
+        (acc, view) => ({
+          ...acc,
+          [view]: PropTypes.shape({ index: PropTypes.number }),
+        }),
+        {},
+      ),
+    ).isRequired,
   };
 
   onMomentumScrollEnd = (e, state) => {
@@ -83,7 +103,7 @@ class SoundView extends Component {
   renderSounds(sounds) {
     return sounds.map((sound) => {
       const soundState = find(this.props.current, { name: sound.name });
-      const isPlaying = soundState && soundState.playing;
+      const isPlaying = !!(soundState && soundState.playing);
       const onPress = () => this.props.beginPlaySong(sound.name, sound.file);
       const onLongPress = () => this.props.beginPlayLong(sound.name, sound.file);
       return (
@@ -121,7 +141,8 @@ class SoundView extends Component {
 function mapStateToProps(state) {
   return {
     views: state.view.views,
-    ...state.sound,
+    playing: state.sound.playing,
+    current: selectCurrentAsArray(state),
   };
 }
 

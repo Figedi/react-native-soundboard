@@ -7,7 +7,6 @@
   "rules": {
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
     "global-require": 0,
-    "no-console": 0,
     "import/no-extraneous-dependencies": 0,
     "import/extensions": 0,
     "import/no-unresolved": 0,

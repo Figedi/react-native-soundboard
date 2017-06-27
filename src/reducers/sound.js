@@ -1,97 +1,104 @@
-import { find, merge, remove } from 'lodash';
+import { omit } from 'lodash';
 
 import { SOUND } from '../constants';
 /**
  * current: [
  * {
- * name: <String>,
- * file: <String>,
- * $sound: <react-native-sound>,
- * playing: <Bool>,
+ *   name: <String>,
+ *   file: <String>,
+ *   $sound: <react-native-sound>,
+ *   playing: <Bool>,
+ *   meta: <Object> // additional meta information
  * }
  * ]
  */
 const INITIAL_STATE = {
   playing: false,
-  current: [],
+  current: {},
 };
 
-function playSong(state, name, file, sound) {
-  const current = state.current.slice();
-  const currentSong = find(current, { name });
-  if (!currentSong) {
+function playSong(state, name, file, $sound, meta) {
+  if (!state.current[name]) {
     // if it doesnt exist yet, add to state
-    current.push({
-      name,
-      file,
-      $sound: sound,
-      playing: true,
-    });
     return {
       ...state,
-      current,
+      current: {
+        ...state.current,
+        [name]: {
+          name,
+          file,
+          meta,
+          $sound,
+          playing: true,
+        },
+      },
     };
   }
   return state;
 }
 
 function pauseSong(state, name) {
-  const current = state.current.slice();
-  const currentSong = find(current, { name });
-  if (currentSong) {
-    // if song exists, change status to not playing
-    currentSong.playing = false;
-    return {
-      ...state,
-      current,
-    };
+  if (!state.current[name]) {
+    return state;
   }
-  return state;
+  return {
+    ...state,
+    current: {
+      ...state.current,
+      [name]: {
+        ...state.current[name],
+        playing: false,
+      },
+    },
+  };
 }
 
 function resumeSong(state, name) {
-  const current = state.current.slice();
-  const currentSong = find(current, { name });
-  if (currentSong) {
-    // if song exists, change status to not playing
-    currentSong.playing = true;
-    return {
-      ...state,
-      current,
-    };
+  if (!state.current[name]) {
+    return state;
   }
-  return state;
+  return {
+    ...state,
+    current: {
+      ...state.current,
+      [name]: {
+        ...state.current[name],
+        playing: true,
+      },
+    },
+  };
 }
 
 function playSongEnd(state, name) {
-  const current = state.current.slice();
-  const currentSong = find(current, { name });
-  if (currentSong) {
-    remove(current, { name });
-    return {
-      ...state,
-      current,
-    };
+  if (!state.current[name]) {
+    return state;
   }
-  return state;
+  return {
+    ...state,
+    current: omit(state.current, [name]),
+  };
 }
 
 function playError(state, name, error) {
-  const current = state.current.slice();
-  let currentSong = find(current, { name });
-  if (currentSong) {
-    currentSong = merge(currentSong, { name: null, error });
-    return {
-      ...state,
-      current,
-    };
+  if (!state.current[name]) {
+    return state;
   }
-  return state;
+  return {
+    ...state,
+    current: {
+      ...state.current,
+      [name]: {
+        ...state.current[name],
+        playing: false,
+        error,
+      },
+    },
+  };
 }
 
 export default function setState(state = INITIAL_STATE, action) {
   if (action.type === SOUND.PLAY) {
-    return playSong(state, action.name, action.file, action.sound);
+    return playSong(state, action.name, action.file, action.sound, action.meta);
   } else if (action.type === SOUND.PAUSE) {
     return pauseSong(state, action.name);
   } else if (action.type === SOUND.RESUME) {

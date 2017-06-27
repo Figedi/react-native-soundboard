@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 class SoundItem extends Component {
   static propTypes = {
     uri: PropTypes.string.isRequired,
-    // isPlaying: PropTypes.boolean,
+    isPlaying: PropTypes.bool,
     onLongPress: PropTypes.func.isRequired,
     onPress: PropTypes.func.isRequired,
   };

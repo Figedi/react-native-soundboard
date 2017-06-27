@@ -3,10 +3,7 @@ import { cloneDeep } from 'lodash';
 import { VIEW, VIEW_LIBRARY } from '../constants';
 
 const INITIAL_STATE = {
-  views: Object.keys(VIEW_LIBRARY).reduce((acc, view) => {
-    acc[view] = { index: 0 };
-    return acc;
-  }, {}),
+  views: Object.keys(VIEW_LIBRARY).reduce((acc, view) => ({ ...acc, [view]: { index: 0 } }), {}),
   current: Object.keys(VIEW_LIBRARY)[0],
 };
 

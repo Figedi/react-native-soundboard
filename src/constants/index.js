@@ -13,6 +13,11 @@ export const VIEW = {
   SET: 'SET',
 };
 
+export const SOURCES = {
+  PRESS: 'PRESS',
+  LONGPRESS: 'LONGPRESS',
+};
+
 export const VIEW_LIBRARY = {
   animals: {
     icon: 'paw',

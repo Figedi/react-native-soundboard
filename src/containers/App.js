@@ -12,8 +12,8 @@ import * as mapDispatchToProps from '../actions';
 
 class App extends Component {
   static propTypes = {
-    current: PropTypes.string,
-    selectTab: PropTypes.func,
+    current: PropTypes.string.isRequired,
+    selectTab: PropTypes.func.isRequired,
   };
 
   state = {

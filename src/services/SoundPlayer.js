@@ -1,5 +1,7 @@
 import Sound from 'react-native-sound';
 
+Sound.setCategory('mixWithOthers');
+
 class SoundPlayer {
   loadSound(file) {
     let sound;
