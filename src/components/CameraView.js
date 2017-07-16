@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View, Button } from 'react-native';
+import { StyleSheet, View, TouchableHighlight } from 'react-native';
 import Camera from 'react-native-camera';
+import Icon from 'react-native-vector-icons/EvilIcons';
 import DeviceInfo from 'react-native-device-info';
 
 import { Camera as CameraService } from '../services';
@@ -16,13 +17,18 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
+  cancel: {
+    position: 'absolute',
+    left: 10,
+    top: 30,
+  },
   capture: {
-    flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    color: '#000',
-    padding: 10,
-    margin: 40,
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    borderWidth: 5,
+    borderColor: '#000',
+    marginBottom: 15,
   },
 });
 
@@ -54,8 +60,20 @@ class RecordingModal extends Component {
           captureTarget={Camera.constants.CaptureTarget.temp}
           aspect={Camera.constants.Aspect.fill}
         >
-          <Button title="[CAPTURE]" style={styles.capture} onPress={this.handleTakePicture} />
-          <Button title="[Abort]" style={styles.capture} onPress={this.props.onCancel} />
+          <TouchableHighlight
+            style={styles.capture}
+            onPress={this.handleTakePicture}
+            underlayColor="rgba(255, 255, 255, 0.5)"
+          >
+            <View />
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={styles.cancel}
+            onPress={this.props.onCancel}
+            underlayColor="rgba(255, 255, 255, 0.5)"
+          >
+            <Icon name="close" size={40} />
+          </TouchableHighlight>
         </CameraComponent>
       </View>
     );

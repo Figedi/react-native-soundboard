@@ -63,7 +63,7 @@ class RecordView extends Component {
   };
 
   render() {
-    const { sounds, current, beginPlayLong, beginPlaySong } = this.props; // todo
+    const { sounds, current, beginPlayLong, beginPlaySong } = this.props;
     const { width, height } = Dimensions.get('window');
 
     return (
