@@ -1,6 +1,6 @@
 {
-  "name": "sounds",
-  "version": "1.0.0",
+  "name": "react-native-soundboard",
+  "version": "1.5.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
