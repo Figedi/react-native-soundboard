@@ -6,7 +6,7 @@ class SoundPlayer {
   loadSound(file) {
     let sound;
     return new Promise((resolve, reject) => {
-      sound = new Sound(file, Sound.MAIN_BUNDLE, (error) => {
+      sound = new Sound(file, '', (error) => {
         if (error) {
           reject(error);
         } else {
@@ -22,7 +22,9 @@ class SoundPlayer {
       sound.play((success) => {
         if (success) {
           resolve();
-        } else reject(new Error('Playback failed due to audio decoding errors')); // onEnd
+        } else {
+          reject(new Error('Playback failed due to audio decoding errors')); // onEnd
+        }
       });
     });
   }

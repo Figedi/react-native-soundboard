@@ -20,7 +20,7 @@ import { put, call, select, fork, take, all } from 'redux-saga/effects';
 import { find, remove } from 'lodash';
 
 import { SOURCES, SOUND } from '../constants';
-import * as actions from '../actions';
+import { sound as actions } from '../actions';
 import { SoundPlayer } from '../services';
 import { selectCurrentAsArray } from '../selectors';
 

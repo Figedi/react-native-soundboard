@@ -19,12 +19,11 @@ Here's an example of the soundboard-app, obviously with cat-tax:
 
 In order to add content to be able to actually play sounds, you need to add some to your asset library:
 
-1. Create a folder, e.g. `assets`
-2. Create subfolders containing images and sounds, e.g. `assets/images` and `assets/sounds`
-3. Add sound- & image-files to your library
-4. Reference them in `src/constants`, the current structure is available there, just mimic the structure
-5. Add the assets-folder to your build-phase, e.g. in XCode add it to `Copy Bundle Resources`
-6. Rebuild and play in the app
+1. Create a folder `assets`
+2. Create subfolders containing images and sounds: `assets/images` and `assets/sounds`
+3. Add sound- & image-files to your library, make sure the sound-basename matches the image-basename (used for autodiscovery)
+4. Add the assets-folder to your build-phase, e.g. in XCode add it to `Copy Bundle Resources`
+5. Rebuild and play in the app
 
 ## Development
 
@@ -39,8 +38,8 @@ This app isn't really tested for heavy use, although it is successfully tested o
 - [x] Asynchronous Sound-playing through react-saga
 - [x] Multiple Sounds through long-presses
 - [x] Auto Discovery of assets
+- [x] Custom Recorded Sounds with camera picture (e.g. "party-mode")
 - [ ] Megaphone mode
-- [ ] Custom Recorded Sounds with camera picture (e.g. "party-mode")
 
 ## Contribute
 

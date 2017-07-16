@@ -1,21 +1,17 @@
 import RNFS from 'react-native-fs';
-import { isArray, reduce, isPlainObject, get } from 'lodash';
-
-const SOUND_PATH = `${RNFS.MainBundlePath}/assets/sounds`;
-const IMAGE_PATH = `${RNFS.MainBundlePath}/assets/images`;
-const DEFAULT_IMAGE = 'http://placehold.it/100x100?text=';
+import { zip, isArray, reduce, isPlainObject, get, values } from 'lodash';
+import { PATHS } from '../constants';
 
 class SoundLibrary {
   library = {};
 
   matchImageToSound(imageFiles, soundFile) {
-    const imageObjects = imageFiles.filter(imageObject => imageObject.name === soundFile.name);
     const { name, file } = soundFile;
-    const uri = get(imageObjects, '[0].file', DEFAULT_IMAGE);
+    const imageObjects = imageFiles.filter(imageObject => imageObject.name === name);
+    const uri = get(imageObjects, '[0].file');
     return {
       name,
-      // sound-player needs an relative path to the MainBundlePath
-      file: file.replace(RNFS.MainBundlePath, '.'),
+      file,
       uri,
     };
   }
@@ -52,9 +48,25 @@ class SoundLibrary {
   }
 
   async constructTree() {
-    const soundFiles = await this.findFiles(SOUND_PATH);
-    const imageFiles = await this.findFiles(IMAGE_PATH);
-    return this.matchImageToSoundfiles(imageFiles, soundFiles);
+    const results = await Promise.all(
+      values(PATHS).map(async (path) => {
+        await this.ensureDirectory(path);
+        const soundFiles = await this.findFiles(`${path}/sounds`);
+        const imageFiles = await this.findFiles(`${path}/images`);
+
+        return this.matchImageToSoundfiles(imageFiles, soundFiles);
+      }),
+    );
+    return results.reduce((acc, curr) => ({ ...acc, ...curr }), {});
+  }
+
+  async ensureDirectory(directory) {
+    const folders = [`${directory}/sounds`, `${directory}/images`];
+
+    const folderStatus = await Promise.all(folders.map(folder => RNFS.exists(folder)));
+    return Promise.all(
+      zip(folders, folderStatus).filter(([, exists]) => !exists).map(([folder]) => RNFS.mkdir(folder)),
+    );
   }
 
   async findFiles(dir) {
@@ -75,13 +87,28 @@ class SoundLibrary {
     );
   }
 
-  async getLibrary() {
-    if (Object.keys(this.library).length) {
+  async moveFile(from, to) {
+    const fileExists = await RNFS.exists(to);
+    if (fileExists) {
+      await RNFS.unlink(to);
+    }
+    await RNFS.moveFile(from, to);
+  }
+
+  async getLibrary(forceUpdate = false) {
+    if (Object.keys(this.library).length && !forceUpdate) {
       return this.library;
     }
     const tree = await this.constructTree();
     this.library = tree;
-    return tree;
+    return this.library;
+  }
+
+  async removeRecord(path) {
+    if (!path || !path.length) {
+      return Promise.resolve();
+    }
+    return RNFS.unlink(path);
   }
 }
 

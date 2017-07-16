@@ -5,43 +5,47 @@ import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { VIEW_LIBRARY as VIEWS } from '../constants';
-import { SoundLibrary } from '../services';
 import SoundView from './SoundView';
+import RecordView from './RecordView';
 
-import * as mapDispatchToProps from '../actions';
+import { sound as mapDispatchToProps } from '../actions';
+import { selectCurrentView, selectLibrary } from '../selectors';
+
+const activeViews = {
+  ...VIEWS,
+  records: {
+    icon: 'microphone',
+    title: 'Record',
+    name: 'records',
+    Component: RecordView,
+  },
+};
 
 class App extends Component {
   static propTypes = {
     current: PropTypes.string.isRequired,
     selectTab: PropTypes.func.isRequired,
+    library: PropTypes.shape(
+      Object.keys(activeViews).reduce((acc, viewName) => ({ ...acc, [viewName]: PropTypes.array }), {}),
+    ).isRequired,
   };
 
-  state = {
-    library: {},
-  };
-
-  componentDidMount() {
-    SoundLibrary.getLibrary().then((library) => {
-      this.setState({
-        library,
-      });
-    });
-  }
-
-  renderTabBarItems(viewKeys = Object.keys(VIEWS)) {
-    return viewKeys.map((itemKey) => {
-      const item = VIEWS[itemKey];
-      const onPress = () => this.props.selectTab(item.name);
+  renderTabBarItems(views) {
+    const { current, library, selectTab } = this.props;
+    return Object.keys(views).map((itemKey) => {
+      const item = views[itemKey];
+      const onPress = () => selectTab(item.name);
+      const ViewComponent = item.Component || SoundView;
       return (
         <Icon.TabBarItemIOS
           key={item.name}
           iconName={item.icon}
-          selected={this.props.current === item.name}
+          selected={current === item.name}
           selectedIconName={item.icon}
           title={item.title}
           onPress={onPress}
         >
-          <SoundView view={itemKey} sounds={this.state.library[itemKey] || []} />
+          <ViewComponent view={itemKey} sounds={library[itemKey] || []} />
         </Icon.TabBarItemIOS>
       );
     });
@@ -50,7 +54,7 @@ class App extends Component {
   render() {
     return (
       <TabBarIOS>
-        {this.renderTabBarItems()}
+        {this.renderTabBarItems(activeViews)}
       </TabBarIOS>
     );
   }
@@ -58,7 +62,8 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    current: state.view.current,
+    current: selectCurrentView(state),
+    library: selectLibrary(state),
   };
 }
 

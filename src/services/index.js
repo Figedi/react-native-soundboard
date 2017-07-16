@@ -1,2 +1,4 @@
-exports.SoundPlayer = require('./SoundPlayer').default;
-exports.SoundLibrary = require('./SoundLibrary').default;
+export SoundPlayer from './SoundPlayer';
+export SoundLibrary from './SoundLibrary';
+export SoundRecorder from './SoundRecorder';
+export Camera from './Camera';

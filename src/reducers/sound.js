@@ -96,7 +96,7 @@ function playError(state, name, error) {
   };
 }
 
-export default function setState(state = INITIAL_STATE, action) {
+export default function setSoundState(state = INITIAL_STATE, action) {
   if (action.type === SOUND.PLAY) {
     return playSong(state, action.name, action.file, action.sound, action.meta);
   } else if (action.type === SOUND.PAUSE) {
