@@ -22,6 +22,11 @@ const styles = StyleSheet.create({
     left: 10,
     top: 30,
   },
+  switch: {
+    position: 'absolute',
+    right: 10,
+    top: 30,
+  },
   capture: {
     width: 70,
     height: 70,
@@ -38,6 +43,10 @@ class RecordingModal extends Component {
     onCancel: PropTypes.func.isRequired,
   };
 
+  state = {
+    displayFront: true,
+  };
+
   handleTakePicture = () => {
     CameraService.takePicture(this.camera, { metadata: {} })
       .then((returnData) => {
@@ -46,16 +55,22 @@ class RecordingModal extends Component {
       .catch(err => this.props.onImage(err));
   };
 
+  handleSwitchCamera = () => {
+    this.setState({ displayFront: !this.state.displayFront });
+  };
+
   render() {
     let CameraComponent = Camera;
     if (DeviceInfo.isEmulator()) {
       CameraComponent = View;
     }
+
+    const cameraDirection = this.state.displayFront ? Camera.constants.Type.front : Camera.constants.Type.back;
     return (
       <View style={styles.cameraContainer}>
         <CameraComponent
           ref={cam => (this.camera = cam)}
-          type={Camera.constants.Type.front}
+          type={cameraDirection}
           style={styles.preview}
           captureTarget={Camera.constants.CaptureTarget.temp}
           aspect={Camera.constants.Aspect.fill}
@@ -73,6 +88,13 @@ class RecordingModal extends Component {
             underlayColor="rgba(255, 255, 255, 0.5)"
           >
             <Icon name="close" size={40} />
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={styles.switch}
+            onPress={this.handleSwitchCamera}
+            underlayColor="rgba(255, 255, 255, 0.5)"
+          >
+            <Icon name="refresh" size={45} />
           </TouchableHighlight>
         </CameraComponent>
       </View>
