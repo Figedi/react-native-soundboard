@@ -37,7 +37,7 @@
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* soundsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* soundsTests.m */; };
 		330691A7209B4F11A76AE50C /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 311B4417DC2A4E0AAC30BF57 /* libRNSound.a */; };
-		3E98AB4D1F168E1100AC55B1 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3E98AB4C1F168E1100AC55B1 /* assets */; };
+		3EBFA2C41F1E781800A5CE42 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBFA2C31F1E781800A5CE42 /* assets */; };
 		4AEDB2FB8433446797A2D151 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFF21E111BB481AA00EF640 /* libRNFS.a */; };
 		551711F1937D484F85BC2226 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B10E6E1081804632B958E043 /* MaterialCommunityIcons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
@@ -353,7 +353,7 @@
 		2D02E4901E0B4A5D006451C7 /* sounds-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sounds-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		311B4417DC2A4E0AAC30BF57 /* libRNSound.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSound.a; sourceTree = "<group>"; };
 		3E7099EDAA574CB9A4B85E42 /* RNFS.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFS.xcodeproj; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; };
-		3E98AB4C1F168E1100AC55B1 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		3EBFA2C31F1E781800A5CE42 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		3FA0B9B941FE4316878489E1 /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		4BFF21E111BB481AA00EF640 /* libRNFS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFS.a; sourceTree = "<group>"; };
 		504835ED8FB14087A708562E /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
@@ -662,7 +662,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				3E98AB4C1F168E1100AC55B1 /* assets */,
+				3EBFA2C31F1E781800A5CE42 /* assets */,
 				13B07FAE1A68108700A75B9A /* sounds */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* soundsTests */,
@@ -1145,7 +1145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E98AB4D1F168E1100AC55B1 /* assets in Resources */,
+				3EBFA2C41F1E781800A5CE42 /* assets in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				A920F7D1046A4517A6F032E0 /* Entypo.ttf in Resources */,
