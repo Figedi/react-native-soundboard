@@ -40,9 +40,10 @@ const styles = StyleSheet.create({
 
 class SoundCollection extends Component {
   static propTypes = {
-    onBeginPlayLong: PropTypes.func.isRequired,
-    onBeginPlaySong: PropTypes.func.isRequired,
     onSwiped: PropTypes.func.isRequired,
+    onPress: PropTypes.func,
+    onLongPress: PropTypes.func,
+    renderSoundItem: PropTypes.func,
     current: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string,
@@ -62,6 +63,9 @@ class SoundCollection extends Component {
   static defaultProps = {
     max: 15,
     children: noop,
+    renderSoundItem: undefined,
+    onPress: noop,
+    onLongPress: noop,
   };
 
   onMomentumScrollEnd = (e, state) => {
@@ -90,18 +94,21 @@ class SoundCollection extends Component {
   }
 
   renderSounds(sounds) {
-    const { current, onBeginPlaySong, onBeginPlayLong } = this.props;
+    const { current, renderSoundItem, onPress, onLongPress } = this.props;
 
     return sounds.map((sound) => {
       const soundState = find(current, { name: sound.name });
+      if (renderSoundItem) {
+        return renderSoundItem({ soundState, sound }, this.props);
+      }
       return (
         <SoundItem
           key={sound.name}
           file={sound.file}
           uri={sound.uri}
           isPlaying={!!(soundState && soundState.playing)}
-          onPress={() => onBeginPlaySong(sound.name, sound.file)}
-          onLongPress={() => onBeginPlayLong(sound.name, sound.file)}
+          onPress={() => onPress(sound.name, sound.file)}
+          onLongPress={() => onLongPress(sound.name, sound.file)}
         />
       );
     });

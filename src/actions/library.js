@@ -27,6 +27,13 @@ export function libraryRemoveRecord(path) {
   };
 }
 
+export function libraryRemoveRecords(records) {
+  return {
+    type: LIBRARY.REMOVE_RECORDS,
+    records,
+  };
+}
+
 export function libraryMoveImage() {
   return {
     type: LIBRARY.MOVE_IMAGE,

@@ -40,40 +40,49 @@ class SoundItem extends Component {
     isPlaying: PropTypes.bool,
     onLongPress: PropTypes.func.isRequired,
     onPress: PropTypes.func.isRequired,
+    renderIcon: PropTypes.func,
   };
 
   static defaultProps = {
     isPlaying: false,
+    backgroundStyles: null,
     uri: undefined,
+    renderIcon: undefined,
   };
 
-  renderPlayPause(iconStyle = styles.icon) {
+  renderPlayPause(iconStyle) {
+    const { isPlaying, renderIcon } = this.props;
+    if (renderIcon) {
+      return renderIcon(this.props);
+    }
     // isPlaying ==> show pause coz we want to signal pause as next action
-    const iconName = this.props.isPlaying ? 'pause' : 'play';
+    const iconName = isPlaying ? 'pause' : 'play';
     return <Icon name={iconName} size={30} style={iconStyle} />;
   }
 
   renderImage() {
-    if (this.props.uri) {
+    const { uri, backgroundStyles } = this.props;
+    if (uri) {
       return (
         <View>
-          <Image source={{ uri: this.props.uri }} style={styles.image} />
+          <Image source={{ uri }} style={[styles.image, backgroundStyles]} />
           {this.renderPlayPause(styles.fgIcon)}
         </View>
       );
     }
     return (
       <View>
-        <Icon name="user-secret" size={50} style={styles.bgIcon} />
+        <Icon name="user-secret" size={50} style={[styles.bgIcon, backgroundStyles]} />
         {this.renderPlayPause(styles.fgIcon)}
       </View>
     );
   }
 
   render() {
+    const { onLongPress, onPress, containerStyles } = this.props;
     return (
-      <View style={styles.itemContainer}>
-        <TouchableOpacity onLongPress={this.props.onLongPress} onPress={this.props.onPress}>
+      <View style={[styles.itemContainer, containerStyles]}>
+        <TouchableOpacity onLongPress={onLongPress} onPress={onPress}>
           {this.renderImage()}
         </TouchableOpacity>
       </View>

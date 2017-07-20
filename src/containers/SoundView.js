@@ -39,8 +39,8 @@ class SoundView extends Component {
         max={15}
         current={current}
         onSwiped={this.handleSwiped}
-        onBeginPlayLong={beginPlayLong}
-        onBeginPlaySong={beginPlaySong}
+        onLongPress={beginPlayLong}
+        onPress={beginPlaySong}
       />
     );
   }

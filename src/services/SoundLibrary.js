@@ -110,6 +110,13 @@ class SoundLibrary {
     }
     return RNFS.unlink(path);
   }
+
+  async removeRecords(records) {
+    if (!records || !records.length) {
+      return Promise.resolve();
+    }
+    return Promise.all(records.map(this.removeRecord));
+  }
 }
 
 export default new SoundLibrary();

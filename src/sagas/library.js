@@ -46,11 +46,25 @@ function* watchMoveImage() {
 function* watchRemove() {
   while (true) {
     const { path } = yield take(LIBRARY.REMOVE_RECORD);
-    yield yield call([SoundLibrary, SoundLibrary.removeRecord], path);
+    yield call([SoundLibrary, SoundLibrary.removeRecord], path);
+    yield call(updateLibrary, true);
+  }
+}
+
+function* watchRemoveMultiple() {
+  while (true) {
+    const { records } = yield take(LIBRARY.REMOVE_RECORDS);
+    yield call([SoundLibrary, SoundLibrary.removeRecords], records);
     yield call(updateLibrary, true);
   }
 }
 
 export default function* root() {
-  yield all([call(watchUpdate), call(watchRehydrate), call(watchMoveImage), call(watchRemove)]);
+  yield all([
+    call(watchUpdate),
+    call(watchRehydrate),
+    call(watchMoveImage),
+    call(watchRemove),
+    call(watchRemoveMultiple),
+  ]);
 }
