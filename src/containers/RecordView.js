@@ -11,6 +11,8 @@ import RecordingModal from './RecordingModal';
 import { sound as soundActions, record as recordActions, library as libraryActions } from '../actions';
 import { selectCurrentAsArray } from '../selectors';
 
+// todo: move state to reducer (avoids flickering between setState and reducer logic)
+
 const styles = StyleSheet.create({
   wrapper: {
     alignItems: 'center',

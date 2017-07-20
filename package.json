@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "debug": "REACT_DEBUGGER=\"rndebugger-open --open --port 8081\" npm start"
+    "debug": "REACT_DEBUGGER=\"rndebugger-open --open --port 8081\" npm start",
+    "release": "react-native run-ios --device 'iPhone von Felix' --configuration Release"
   },
   "dependencies": {
     "eventemitter3": "^2.0.3",

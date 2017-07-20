@@ -22,16 +22,28 @@ In order to add content to be able to actually play sounds, you need to add some
 1. Create a folder `assets`
 2. Create subfolders containing images and sounds: `assets/images` and `assets/sounds`
 3. Add sound- & image-files to your library, make sure the sound-basename matches the image-basename (used for autodiscovery)
-4. Add the assets-folder to your build-phase, e.g. in XCode add it to `Copy Bundle Resources`
-5. Rebuild and play in the app
+  3.1 Make sure your asset folder has subdirectories, which correspond to your configured TABS
+4. Add the assets-folder to your build-phase, e.g. in Xcode add it to `Copy Bundle Resources` or Rightclick + `Add Files to <projectname>`
+5. Change in `Constants.js` the `VIEW_LIBRARY`. The first-level keys are your subfolders in `assets/sounds`
+6. See development / production for running
 
 ## Development
 
-This project doesn't utilize any special development workflow. Thus, you can start the RN-Bundler-dev-server with `npm run start` and build for the simulator with `react-native run-ios`.
+Nothing special here, you can either use the provided npm-scripts or use xcode to run:
+* With CLI: `npm run start` or `npm run debug` and `react-native run-ios`
+* With Xcode: Open Project & Hit play
+
 
 ## Production
 
-This app isn't really tested for heavy use, although it is successfully tested on various festivals. In order to run your app locally on your device, follow the official [React-Native-Guidelines](http://facebook.github.io/react-native/releases/0.36/docs/running-on-device-ios.html)
+CLI:
+1. Make sure to have installed `ios-deploy`
+2. Change the name in the `release` npm-script to your iPhone's name
+3. Run the `release` npm-script
+
+XCode:
+1. Configure your build-Scheme to `Release`
+2. Hit play
 
 ## Features
 
